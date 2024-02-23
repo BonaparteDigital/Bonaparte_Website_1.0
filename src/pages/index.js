@@ -13,24 +13,24 @@ const Home = () => {
   const [effectButtonTwo, setEffectButtonTwo] = useState(false);
   return (
     <Layout title="Bonaparte">
-      <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center">
-        <div id="title" className="md:w-1/2">
-          <h1 className="text-9xl md:text-[150px] text-shadow-solid shadow-orange">grow your brand</h1>
-        </div>
-        <div id="content" className="md:w-1/2">
-          <div id="text" className="max-w-[420px] mx-auto">
-            <p className="text-3xl md:text-left mb-20 leading-10">Take your <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
-            <span class="relative text-white">business</span>
-            </span> to new heights with our no-nonsense approach to digital marketing.</p>
+        <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center" style={{ height: `calc(100vh - 80px)` }}>
+          <div id="title" className="md:w-1/2">
+            <h1 className="text-9xl md:text-[150px] text-shadow-solid shadow-orange">grow your brand</h1>
           </div>
-          <div id="button" className="justify-center">
-          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
-            <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+          <div id="content" className="md:w-1/2">
+            <div id="text" className="max-w-[420px] mx-auto">
+              <p className="text-3xl md:text-left md:mb-20 leading-10">Take your <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+              <span class="relative text-white">business</span>
+              </span> to new heights with our no-nonsense approach to digital marketing.</p>
+            </div>
+            <div id="button" className="justify-center">
+              <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
+              <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+            </div>
           </div>
-        </div>
-      </div>  
+        </div>  
       <div id="strategies" className="my-20">
         <Strategies />
       </div>
@@ -40,7 +40,7 @@ const Home = () => {
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our no-nonsense approach to marketing.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
             <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
           </div>  
@@ -73,7 +73,7 @@ const Home = () => {
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
           </div>  

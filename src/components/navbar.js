@@ -1,27 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Logo from '../assets/logo_bonaparte_black.svg';
-import CloseIcon from "../assets/icon_linkedin.svg";
-import MenuIcon from "../assets/icon_mail.svg";
+import CloseIcon from "../assets/icon_close.svg";
+import OpenIcon from "../assets/icon_open.svg";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Modal Open-Close call
+  const [isScrolled, setIsScrolled] = useState(false); // State to track if the page has been scrolled
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsTransparent(false);
-      } else {
-        setIsTransparent(true);
-      }
+      const yOffset = window.scrollY;
+      setIsScrolled(yOffset > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const handleCloseModal = () => {
@@ -29,18 +24,18 @@ const Header = () => {
   };
 
   return (
-    <header className={`${isTransparent ? 'bg-transparent' : 'bg-olive'} transition duration-300 sticky top-0 z-50`}>
+    <header className={`${isScrolled ? 'md:py-2' : 'md:py-4'} bg-olive transition-all duration-300 sticky py-4 top-0 z-50`}>
       <div className="container mx-auto px-4">
-          <div id="header.desktop" className='flex items-center justify-between px-2 py-4'>
+          <div id="header.desktop" className='flex items-center justify-between'>
             <div id="navbar.left" className="z-50">
-              <Link to="/"><Logo className="w-[160px]" alt="Bonaparte"/></Link>
+              <Logo className={`w-[160px] ${isOpen ? 'filter brightness-0 invert' : ''}`} alt="Bonaparte"/>
             </div>
             <div id="hamburguer.menu" className='md:hidden z-50'>
               <button id="menu" type="button" aria-label="Menu" className='block' onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? (
                   <CloseIcon />
                 ) : (
-                  <MenuIcon />
+                  <OpenIcon />
                 )}
               </button>
             </div>
@@ -52,11 +47,11 @@ const Header = () => {
               </nav>
             </div>
             <div id="navbar.right" className="hidden md:flex md:pl-20">
-            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md font-bold bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book a RDV</a>
+            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md font-bold bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
             </div>
           </div>
       </div>
-        <div id="hamburguer.modal"
+      <div id="hamburguer.modal"
         className={`bg-green text-olive text-5xl text-center font-mulish font-black h-full fixed top-0 w-full py-10 pt-2 pb-4 z-40 transition-transform duration-400 ease-in-out ${isOpen ? 'transform translate-y-0' : 'transform -translate-y-full'}`}>
         <div>
           <a className="mt-20 px-4 py-4 block decoration-primary decoration-2" href="#strategies" onClick={handleCloseModal} >strategies</a>
@@ -64,9 +59,9 @@ const Header = () => {
           {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="#insights" onClick={handleCloseModal} >insights</a>*/}
         </div>
         <div>
-          <a href='https://calendly.com/hellobonaparte/meet-greet' className="mt-20 inline-block bg-olive text-green font-bold text-2xl px-6 py-3 rounded-full hover:bg-orange transition duration-300">Book a RDV</a>
+           <a href='https://calendly.com/hellobonaparte/meet-greet' className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book a RDV</a>
         </div>
-        </div>
+      </div>
     </header>
   )
 }

@@ -4,13 +4,10 @@ import Footer from "../components/footer"
 
 const Layout = ({ title, children }) => {
   return (
-    <div id="global-wrapper" className="bg-olive">
-      <header id="global-header">
-        <NavBar />
-      </header>
-      <div className="container mx-auto"></div>
-      <main>{children}</main>
-        <Footer />
+    <div id="global-wrapper" className="flex flex-col min-h-screen bg-olive">
+      <NavBar />
+      <main className="flex-grow">{children}</main>
+      <Footer />
     </div>
   )
 }
