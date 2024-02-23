@@ -38,9 +38,9 @@ const Header = () => {
             <div id="hamburguer.menu" className='md:hidden z-50'>
               <button id="menu" type="button" aria-label="Menu" className='block' onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? (
-                  <img src={CloseIcon}></img>
+                  <CloseIcon />
                 ) : (
-                  <img src={MenuIcon}></img>
+                  <MenuIcon />
                 )}
               </button>
             </div>
