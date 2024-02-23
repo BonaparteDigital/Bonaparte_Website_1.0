@@ -19,10 +19,9 @@ const Home = () => {
         </div>
         <div id="content" className="md:w-1/2">
           <div id="text" className="max-w-[420px] mx-auto">
-            <p className="text-3xl md:text-left mb-20">Take your
-            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+            <p className="text-3xl md:text-left mb-20 leading-10">Take your <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
             <span class="relative text-white">business</span>
-            </span>to new heights with our no-nonsense approach to digital marketing.</p>
+            </span> to new heights with our no-nonsense approach to digital marketing.</p>
           </div>
           <div id="button" className="justify-center">
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
@@ -32,12 +31,12 @@ const Home = () => {
           </div>
         </div>
       </div>  
-      <div id="strategies" className="mb-20">
+      <div id="strategies" className="my-20">
         <Strategies />
       </div>
-      <div id="cta" className="bg-olive p-10 my-10">
+      <div id="cta" className="bg-olive p-10 md:my-10 my-10">
         <div className="container flex flex-col md:flex-row justify-center items-center">
-          <div className="md:w-1/2"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+          <div className="md:w-1/2 md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our no-nonsense approach to marketing.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
@@ -70,7 +69,7 @@ const Home = () => {
       </div>
       <div id="cta" className="bg-gradient-to-b from-white to-olive p-10 mb-6">
         <div className="container flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-1/2"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+        <div className="md:w-1/2 md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}

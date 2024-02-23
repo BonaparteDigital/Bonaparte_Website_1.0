@@ -10,8 +10,12 @@ const Footer = () => {
   return (
     <footer className="bg-green text-olive-light p-5">
         <div id="footer_content_mobile" className="md:hidden flex flex-col">
-          <div className="mx-auto mt-4">
+          <div className="mx-auto mt-4 mb-8">
             <Link to="/"><Logo className="h-5" alt="Bonaparte"/></Link>
+          </div>
+          <div id="Subscribe" className="items-center mx-auto">
+              <p className="text-xl mb-6 text-center">Subscribe to our debriefs</p>
+              <Subscribe></Subscribe>
           </div>
           <div className="my-8 border-t border-olive"></div> {/* Horizontal line */}
           <div id="socialmedia_icons_mobile" className="flex justify-center space-x-6 mb-8">
@@ -32,7 +36,7 @@ const Footer = () => {
             <div className="w-1/3 text-center">
               <p className="text-xl">Talk To Us</p>
               <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md font-bold bg-olive text-green px-6 py-2 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book a RDV</a></div>
-            <div className="w-1/3 pl-8">
+            <div id="Subscribe" className="w-1/3 pl-8">
               <p className="text-xl mb-2">Subscribe to our debriefs</p>
               <Subscribe></Subscribe>
             </div>

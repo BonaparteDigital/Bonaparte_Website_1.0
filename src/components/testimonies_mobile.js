@@ -20,13 +20,6 @@ const testimonial = [
     quote: "Bonaparte has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
   },
   {
-    avatar: AgrowPFP,
-    name: "Antonella Maggioni",
-    role: "CEO",
-    companyLogo: Agrow,
-    quote: "Bonaparte has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
-  },
-  {
     avatar: CixStudioPFP,
     name: "Carmen Miroglio Vázquez",
     role: "Director of Operations",
@@ -43,10 +36,10 @@ function MobileSlider() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    swipeToSlide: true,
   };
   
   return (
-    
     <div id="testimonies.mobile" className="bg-white py-10">
       <h2 className="text-3xl font-bold text-center mb-8 text-green">Real Feedback, Real Results</h2>
       <Slider className='container mx-auto px-10' {...settings}>

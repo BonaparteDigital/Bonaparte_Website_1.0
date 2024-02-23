@@ -23,13 +23,6 @@ const testimonials = [
     quote: "Bonaparte has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
   },
   {
-    avatar: AgrowPFP,
-    name: "Antonella Maggioni",
-    role: "CEO",
-    companyLogo: Agrow,
-    quote: "Bonaparte has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
-  },
-  {
     avatar: CixStudioPFP,
     name: "Carmen Miroglio Vázquez",
     role: "Director of Operations",
@@ -63,6 +56,7 @@ function SimpleSlider() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    swipeToSlide: false,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 10000,
@@ -74,7 +68,7 @@ function SimpleSlider() {
 
   return (
     <div id="testimonies.desktop" className="xl:py-20 py-14 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-8 text-green">Empowering Our Allied Forces</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 text-green">Empowering Our Allies</h2>
       <div className='container flex flex-wrap justify-center items-start gap-4 text-olive-light mx-auto' style={{ position: 'relative' }}>
       <Slider className='container mx-auto px-10 sm:px-8 lg:px-14' {...settings}>
         {testimonials.map((testimonial, index) => (
