@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Logo from '../assets/logo_bonaparte_black.svg';
-import CloseIcon from "../assets/icon_close.svg";
+import CloseIcon from "../assets/icon_mail.svg";
 import OpenIcon from "../assets/icon_open.svg";
 
 const Header = () => {
