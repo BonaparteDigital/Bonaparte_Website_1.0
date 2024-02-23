@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Logo from '../assets/logo_bonaparte_black.svg';
-import MenuIcon from '../assets/icon_menu.svg'; // Mobile menu icon
-import CloseIcon from '../assets/icon_close.svg'; // Mobile close icon
+import CloseIcon from "../assets/icon_linkedin.svg";
+import MenuIcon from "../assets/icon_mail.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
