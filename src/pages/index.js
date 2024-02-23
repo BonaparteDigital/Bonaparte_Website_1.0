@@ -1,176 +1,87 @@
-import * as React from "react"
+import React, { useState } from "react";
+import Layout from "../components/layout";
+import Strategies from "../components/strategies";
+import TestimoniesDesktop from "../components/testimonies_desktop";
+import TestimoniesMobile from "../components/testimonies_mobile";
+import Google from "../assets/google_partner.svg";
+import Meta from "../assets/meta_business_partner.svg";
+import Semrush from "../assets/semrush_agency_partner.svg";
+import Amazon from "../assets/amazon_ads.svg";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-const IndexPage = () => {
+const Home = () => {
+  const [effectButtonOne, setEffectButtonOne] = useState(false);
+  const [effectButtonTwo, setEffectButtonTwo] = useState(false);
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+    <Layout title="Bonaparte">
+      <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center">
+        <div id="title" className="md:w-1/2">
+          <h1 className="text-9xl md:text-[150px] text-shadow-solid shadow-orange">grow your brand</h1>
+        </div>
+        <div id="content" className="md:w-1/2">
+          <div id="text" className="max-w-[420px] mx-auto">
+            <p className="text-3xl md:text-left mb-20">Take your
+            <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+            <span class="relative text-white">business</span>
+            </span>to new heights with our no-nonsense approach to digital marketing.</p>
+          </div>
+          <div id="button" className="justify-center">
+          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
+            <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+          </div>
+        </div>
+      </div>  
+      <div id="strategies" className="mb-20">
+        <Strategies />
+      </div>
+      <div id="cta" className="bg-olive p-10 my-10">
+        <div className="container flex flex-col md:flex-row justify-center items-center">
+          <div className="md:w-1/2"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+            <span className="relative text-white">Conquer?</span></span></h2></div>
+          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our no-nonsense approach to marketing.</p>
+          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
+            <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+          </div>  
+        </div>
+      </div>
+      <div id="backed-by" className="bg-gradient-to-b from-olive to-white p-10">
+      <div className="container flex flex-col md:flex-row items-center">
+        <div className="md:w-2/5">
+          <h2 className="text-xl font-semibold md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
+        </div>
+        <div id="vendor_logo" className="flex flex-wrap md:w-4/5">
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Google alt="Google Partner" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Meta alt="Meta Partner" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><Semrush alt="SemRush Agency Partner" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><Amazon alt="Amazon Ads" className="h-10"/></div>
+        </div>
+      </div>
+      </div>
+       <div id="testimonies">
+        <div id="testimonies_mobile" className="block sm:hidden bg-white">
+          <div className="container block sm:hidden"><TestimoniesMobile /></div>
+        </div>
+        <div id="testimonies_desktop" className="hidden sm:block bg-white">
+          <div className="container hidden sm:block bg-white"><TestimoniesDesktop /></div>
+        </div>
+      </div>
+      <div id="cta" className="bg-gradient-to-b from-white to-olive p-10 mb-6">
+        <div className="container flex flex-col md:flex-row justify-center items-center">
+        <div className="md:w-1/2"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+            <span className="relative text-white">Conquer?</span></span></h2></div>
+          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
+          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book a RDV</button></a>
+          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+          </div>  
+        </div>
+      </div>
+    </Layout>
+  );
+};
 
-export default IndexPage
-
-export const Head = () => <title>Home Page</title>
+export default Home;
