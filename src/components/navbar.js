@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import Logo from '../assets/logo_bonaparte_black.svg';
-import CloseIcon from "../assets/icon_close.svg";
-import OpenIcon from "../assets/icon_open.svg";
+import IconClose from "../assets/icon_menu_close.svg";
+import OpenIcon from "../assets/icon_menu_open.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // Modal Open-Close call
@@ -33,7 +33,7 @@ const Header = () => {
             <div id="hamburguer.menu" className='md:hidden z-50'>
               <button id="menu" type="button" aria-label="Menu" className='block' onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? (
-                  <CloseIcon />
+                  <IconClose />
                 ) : (
                   <OpenIcon />
                 )}
@@ -59,7 +59,7 @@ const Header = () => {
           {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="#insights" onClick={handleCloseModal} >insights</a>*/}
         </div>
         <div>
-           <a href='https://calendly.com/hellobonaparte/meet-greet' className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book a RDV</a>
+           <Link to="https://calendly.com/hellobonaparte/meet-greet" className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book RDV</Link>
         </div>
       </div>
     </header>
