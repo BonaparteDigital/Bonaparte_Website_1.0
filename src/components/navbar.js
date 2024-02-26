@@ -40,14 +40,14 @@ const Header = () => {
               </button>
          </div>
          <div id="navbar.center" className="hidden md:flex text-center">
-              <nav className="md:text-lg hidden md:flex font-semibold">
+              <nav className="md:text-lg hidden md:flex">
                 <a className="nav-link decoration-orange mr-5" href="#strategies">Strategies</a>
                 <a className="nav-link decoration-orange mr-5" href="#testimonies">Testimonies</a>
                {/*<a className="hover:underline underline-offset-8 mr-5" href="#insights">Insights</a>*/}
               </nav>
          </div>
          <div id="navbar.right" className="hidden md:flex md:pl-20">
-            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md font-bold bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
+            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
          </div>
        </div>
       </div>

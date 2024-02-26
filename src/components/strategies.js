@@ -19,7 +19,7 @@ const Strategies = () => {
         <div className="max-w-4xl md:max-w-full mx-auto md:space-y-0 space-y-8 md:flex md:flex-row gap-8 md:gap-4">
           <div className="bg-green text-olive shadow-lg rounded-3xl p-8">
             <Step1 className="mb-2" alt="a magnifying glass"/>
-            <h3 className="text-2xl font-semibold mb-2 md:text-xl">Enhance Visibility</h3>
+            <h3 className="text-2xl mb-2 md:text-xl">Enhance Visibility</h3>
             <p className="text-olive-light">Seize the spotlight and stand out from the competition with our comprehensive branding solutions that catapult your brand to the forefront.</p>
           </div>
           <div id="arrow_middle" className="flex md:hidden justify-center">
@@ -27,7 +27,7 @@ const Strategies = () => {
           </div>
           <div className="bg-green text-olive shadow-lg rounded-3xl p-8">
             <Step2 className="mb-2" alt="two people side by side"/>
-            <h3 className="text-2xl font-semibold mb-2 md:text-xl">Optimize Engagement</h3>
+            <h3 className="text-2xl mb-2 md:text-xl">Optimize Engagement</h3>
             <p className="text-olive-light">Rally a devoted audience with our engaging social media and killer content marketing, forging bonds that transform followers into ambassadors.</p>
           </div>
           <div id="arrow_middle" className="flex md:hidden justify-center">
@@ -35,7 +35,7 @@ const Strategies = () => {
           </div>
           <div className="bg-green text-olive shadow-lg rounded-3xl p-8">
             <Step3 className="mb-2" alt="two cogs working"/>
-            <h3 className="text-2xl font-semibold mb-2 md:text-xl">Streamline Operations</h3>
+            <h3 className="text-2xl mb-2 md:text-xl">Streamline Operations</h3>
             <p className="text-olive-light">Sharpen efficiency and slash expenses with strategic insights and analytics, charting a course for smarter, cost-effective business decisions.</p>
           </div>
           <div id="arrow_middle" className="flex md:hidden justify-center">
@@ -43,7 +43,7 @@ const Strategies = () => {
           </div>
           <div className="bg-green text-olive shadow-lg rounded-3xl p-8">
             <Step4 className="mb-2" alt="an upwards trend on a chart"/>
-            <h3 className="text-2xl font-semibold mb-2 md:text-xl">Boost Sales</h3>
+            <h3 className="text-2xl b-2 md:text-xl">Boost Sales</h3>
             <p className="text-olive-light">Launch an offensive on the market with precision-targeted SEO and impactful advertising campaigns, capturing leads and escalating customer acquisition.</p>
           </div>
           <div id="arrow_tip" className="flex md:hidden justify-center">

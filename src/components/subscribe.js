@@ -43,7 +43,7 @@ return (
     <form className="w-full max-w-sm relative" onSubmit={handleSubmit}>
     <div className="flex items-center py-2">
       <input className="appearance-none bg-transparent border-none w-full text-olive mr-3 py-1 px-2 leading-tight focus:outline-none placeholder:text-olive-light" value={email} type="text" onChange={e => setEmail(e.target.value)} placeholder="Enter your email" aria-label="Email"/>
-      <button className="md:inline-block text-md font-bold bg-olive text-green px-6 py-2 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5" type="submit">
+      <button className="md:inline-block text-md bg-olive text-green px-6 py-2 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5" type="submit">
         Submit
       </button>
       <div className="absolute bottom-0 left-0 right-0 border-b border-olive" style={{ marginRight: '100px' }}></div>

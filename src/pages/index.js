@@ -15,11 +15,11 @@ const Home = () => {
   
   return (
     <Layout title="Bonaparte">
-        <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center" style={{ height: `calc(100vh - 80px)` }}>
-          <div id="title" className="md:w-1/2">
-            <h1 className="text-9xl md:text-[150px] text-shadow-solid shadow-orange">grow your brand</h1>
-          </div>
-          <div id="content" className="md:w-1/2">
+      <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center" style={{ height: `calc(100vh - 80px)` }}>
+        <div id="title" className="md:w-1/2">
+          <h1 className="text-9xl md:text-[150px] font-bold text-shadow-solid shadow-orange">grow your brand</h1>
+        </div>
+        <div id="content" className="md:w-1/2">
             <div id="text" className="max-w-[420px] mx-auto">
               <p className="text-2xl md:text-3xl md:text-left md:mb-20 leading-10">Take your business to new heights with our no-nonsense approach to <span class="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
               <span class="relative text-white">digital marketing.</span></span></p>
@@ -30,9 +30,9 @@ const Home = () => {
               <a href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
               onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
             </div>
-          </div>
-          <div className="arrow hidden md:block"></div>
-        </div>  
+        </div>
+        <div className="arrow hidden md:block"></div>
+      </div>  
       <div id="strategies" className="my-20">
         <Strategies />
       </div>
@@ -51,7 +51,7 @@ const Home = () => {
       <div id="backed-by" className="bg-gradient-to-b from-olive to-white py-10 px-2">
       <div className="container flex flex-col md:flex-row items-center">
         <div className="md:w-2/5">
-          <h2 className="text-xl font-semibold md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
+          <h2 className="text-xl md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
         </div>
         <div id="vendor_logo" className="flex flex-wrap md:w-4/5">
             <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Google alt="Google Partner" className="h-10"/></div>
