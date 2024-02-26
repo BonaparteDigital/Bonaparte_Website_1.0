@@ -51,7 +51,7 @@ function MobileSlider() {
       <blockquote className="text-lg mt-4 mb-6">{testimonial.quote}</blockquote>
       <div className="border-t-4 border-orange w-20 mx-auto my-7"></div> {/* Horizontal line */}
       <div id="client" className='flex ml-6 items-center'>
-        <img src={testimonial.avatar} className="w-12 h-12 rounded-full" alt={`${testimonial.name} avatar`} ></img>
+          <img src={testimonial.avatar} className="w-12 h-12 rounded-full" alt={`${testimonial.name} avatar`} ></img>
           <div className='text-left ml-2'>
           <p className='mb-0'>{testimonial.name}</p>
           <p className='mb-0'>{testimonial.role}</p>

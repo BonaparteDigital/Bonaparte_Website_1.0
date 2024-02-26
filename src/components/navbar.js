@@ -28,7 +28,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
        <div id="header.desktop" className='flex items-center justify-between'>
          <div id="navbar.left" className="z-50">
-            <Link to="/"><Logo className={`w-[160px] ${isOpen ? 'filter brightness-0 invert' : ''}`} alt="Bonaparte"/></Link>
+            <Link to="/" aria-label="Bonaparte Home"><Logo className={`w-[160px] ${isOpen ? 'filter brightness-0 invert' : ''}`} alt="Bonaparte"/></Link>
          </div>
          <div id="hamburguer.menu" className='md:hidden z-50'>
               <button id="menu" type="button" aria-label="Menu" className='block' onClick={() => setIsOpen(!isOpen)}>

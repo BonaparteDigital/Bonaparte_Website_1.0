@@ -19,9 +19,9 @@ const Footer = () => {
           </div>
           <div className="my-8 border-t border-olive"></div> {/* Horizontal line */}
           <div id="socialmedia_icons_mobile" className="flex justify-center space-x-6 mb-8">
-            <Link to="https://x.com/bonapartedigital"><IconX className="h-8" alt=""/></Link>
-            <Link to="https://www.linkedin.com/bonapartedigital"><IconLinkedIn className="h-8" alt="LinkedIn"/></Link>
-            <Link to="mailto:hello@bonapartedigital.com"><IconMail className="h-8" alt="email"/></Link>
+             <Link to="https://x.com/bonapartedigital" aria-label="Follow us on X"><IconX className="h-8" alt=""/></Link>
+             <Link to="https://www.linkedin.com/bonapartedigital" aria-label="Visit our LinkedIn Company Page"><IconLinkedIn className="h-8" alt="LinkedIn"/></Link>
+             <Link to="mailto:hello@bonapartedigital.com" aria-label="Send us an email"><IconMail className="h-8" alt="email"/></Link>
           </div>
           <div id="copyright" className="text-center">
             <p>© {new Date().getFullYear()} BONAPARTE | All Rights Reserved | {/*<Link to="/privacy-policy">Privacy Policy</Link>*/}</p>
@@ -52,9 +52,9 @@ const Footer = () => {
               {/*<Link to="/insights" className="px-4 hover:text-olive">Insights</Link>*/}
             </div>
             <div id="socialmedia_icons" className="flex space-x-6">
-             <Link to="https://x.com/bonapartedigital"><IconX className="h-8" alt=""/></Link>
-             <Link to="https://www.linkedin.com/bonapartedigital"><IconLinkedIn className="h-8" alt="LinkedIn"/></Link>
-             <Link to="mailto:hello@bonapartedigital.com"><IconMail className="h-8" alt="email"/></Link>
+             <Link to="https://x.com/bonapartedigital" aria-label="Follow us on X"><IconX className="h-8" alt=""/></Link>
+             <Link to="https://www.linkedin.com/bonapartedigital" aria-label="Visit our LinkedIn Company Page"><IconLinkedIn className="h-8" alt="LinkedIn"/></Link>
+             <Link to="mailto:hello@bonapartedigital.com" aria-label="Send us an email"><IconMail className="h-8" alt="email"/></Link>
             </div>
           </div>
         </div>
