@@ -4,16 +4,10 @@
 module.exports = {
   siteMetadata: {
     title: `Bonaparte | Your Digital Strategist`,
-    author: {
-      name: `Bonaparte`,
-      summary: `Meet Bonaparte, Your Digital Strategist`,
-    },
     description: `Meet BONAPARTE—Your Digital Strategist. We're not just a digital marketing agency; we're your strategic partners in world-class branding and digital domination. Forget buzzwords and fluff. We deliver hard-hitting results that last.`,
     siteUrl: `https://bonapartedigital.com/`,
     image: "/images/Preview_Image@2x.png",
-    social: {
-      twitter: `bonapartedigital`,
-    },
+    twitterUsername: `@bonapartedigital`,
   },
   plugins: ["gatsby-plugin-postcss",
   "gatsby-plugin-image",

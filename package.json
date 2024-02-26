@@ -17,6 +17,7 @@
   "dependencies": {
     "@fontsource/mulish": "^5.0.16",
     "@fontsource/raleway": "^5.0.16",
+    "@headlessui/react": "^1.7.18",
     "autoprefixer": "^10.4.17",
     "gatsby": "^5.13.3",
     "gatsby-plugin-google-tagmanager": "^5.13.1",

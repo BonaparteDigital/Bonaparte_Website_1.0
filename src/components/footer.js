@@ -42,14 +42,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="my-8 border-t border-olive"></div> {/* Horizontal line */}
-          <div id="lower-footer" className="flex container max-w-screen-xl justify-between px-10">
+          <div id="lower-footer" className="flex container max-w-screen-xl justify-between px-10 items-center">
             <div id="copyright" className="text-center">
-              <p>© {new Date().getFullYear()} BONAPARTE | All Rights Reserved | {/*<Link to="/privacy-policy" className="hover:text-olive">Privacy Policy</Link>*/}</p>
+              <p className="mb-0">© {new Date().getFullYear()} BONAPARTE | All Rights Reserved | <Link to="/privacy-policy" className="hover:text-olive">Privacy Policy</Link></p>
             </div>
             <div className="">
               <Link to="#strategies" className="px-4 hover:text-olive">Strategies</Link>
               <Link to="#testimonies" className="px-4 hover:text-olive">Testimonies</Link>
-             {/*<Link to="/insights" className="px-4 hover:text-olive">Insights</Link> */}
+              {/*<Link to="/insights" className="px-4 hover:text-olive">Insights</Link>*/}
             </div>
             <div id="socialmedia_icons" className="flex space-x-6">
              <Link to="https://x.com/bonapartedigital"><IconX className="h-8" alt=""/></Link>

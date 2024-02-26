@@ -23,6 +23,7 @@ html {
   html, body {
     height: 100%;
     margin: 0;
+    overscroll-behavior-y: none; /* Prevents vertical bounce */
   }
   
   /* Heading Styles */
@@ -61,7 +62,7 @@ html {
     }
   
       /* React Slick Added Styles */
-  
+
       .slick-dots {
         left: 0px;
       }
@@ -81,3 +82,80 @@ html {
         font-size: 20px !important;
         line-height: 20px !important;
     }
+
+/* Navbar Hover */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+  color: #14271D; /* Initial text color */
+  text-decoration: none; /* Optional: Removes underline */
+  padding: 2px; /* Add padding around the text */
+  z-index: 1; /* Ensure text is above the pseudo-element */
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: -2px; /* Extend the box above the text */
+  left: -2px; /* Extend the box to the left of the text */
+  right: -2px; /* Extend the box to the right of the text */
+  bottom: -2px; /* Extend the box below the text */
+  transform: scaleX(0) skewY(0deg); /* Initial transform with skew */
+  transform-origin: left;
+  background-color: #EC8602; /* Background color of the box */
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  transform: scaleY(1) skewY(-3deg); /* Maintain skew on hover */
+  top: 0; /* Adjust these values as needed */
+}
+
+.nav-link:hover {
+  color: #ffffff; /* Change text color on hover */
+}
+
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #EC8602 solid;
+  border-bottom: 2px #EC8602 solid;
+}
+  
+.arrow:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px #EC8602 solid;
+  border-bottom: 2px #EC8602 solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}

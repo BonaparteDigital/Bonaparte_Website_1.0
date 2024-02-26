@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../components/layout";
+import { Seo } from "../components/seo";
 import Strategies from "../components/strategies";
 import TestimoniesDesktop from "../components/testimonies_desktop";
 import TestimoniesMobile from "../components/testimonies_mobile";
@@ -11,6 +12,7 @@ import Amazon from "../assets/amazon_ads.svg";
 const Home = () => {
   const [effectButtonOne, setEffectButtonOne] = useState(false);
   const [effectButtonTwo, setEffectButtonTwo] = useState(false);
+  
   return (
     <Layout title="Bonaparte">
         <div id="hero" className="h-screen container flex md:flex-row flex-col justify-center items-center text-center px-4 bg-cover bg-center" style={{ height: `calc(100vh - 80px)` }}>
@@ -19,34 +21,34 @@ const Home = () => {
           </div>
           <div id="content" className="md:w-1/2">
             <div id="text" className="max-w-[420px] mx-auto">
-              <p className="text-3xl md:text-left md:mb-20 leading-10">Take your <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
-              <span class="relative text-white">business</span>
-              </span> to new heights with our no-nonsense approach to digital marketing.</p>
+              <p className="text-2xl md:text-3xl md:text-left md:mb-20 leading-10">Take your business to new heights with our no-nonsense approach to <span class="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
+              <span class="relative text-white">digital marketing.</span></span></p>
             </div>
             <div id="button" className="justify-center">
               <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
               onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-              <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              <a href='mailto:hello@bonapartedigital.com'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
               onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
             </div>
           </div>
+          <div className="arrow hidden md:block"></div>
         </div>  
       <div id="strategies" className="my-20">
         <Strategies />
       </div>
-      <div id="cta" className="bg-olive p-10 md:my-10 my-10">
+      <div id="cta" className="bg-olive px-4 py-10 md:p-10 md:my-10 my-10">
         <div className="container flex flex-col md:flex-row justify-center items-center">
-          <div className="md:w-1/2 md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+          <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
             <span className="relative text-white">Conquer?</span></span></h2></div>
-          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our no-nonsense approach to marketing.</p>
+          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-            <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            <a href='mailto:hello@bonapartedigital.com'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
           </div>  
         </div>
       </div>
-      <div id="backed-by" className="bg-gradient-to-b from-olive to-white p-10">
+      <div id="backed-by" className="bg-gradient-to-b from-olive to-white py-10 px-2">
       <div className="container flex flex-col md:flex-row items-center">
         <div className="md:w-2/5">
           <h2 className="text-xl font-semibold md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
@@ -67,14 +69,14 @@ const Home = () => {
           <div className="container hidden sm:block bg-white"><TestimoniesDesktop /></div>
         </div>
       </div>
-      <div id="cta" className="bg-gradient-to-b from-white to-olive p-10 mb-6">
+      <div id="cta" className="bg-gradient-to-b from-white to-olive px-4 py-10 md:p-10 mb-6">
         <div className="container flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-1/2 md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-orange relative inline-block">
+        <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
           <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg font-bold bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+          <a href='mailto:hello@bonapartedigital.com'><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg font-bold bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
           </div>  
         </div>
@@ -84,3 +86,9 @@ const Home = () => {
 };
 
 export default Home;
+
+export const Head = () => (
+  <Seo
+  title="Bonaparte | Digital Strategist"
+  description=""/>
+  )

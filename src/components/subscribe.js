@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React, { useState } from "react";
 
 const Subscribe = () => {
     const [email, setEmail] = useState("");

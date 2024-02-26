@@ -6,9 +6,9 @@ import "slick-carousel/slick/slick-theme.css";
 import CixStudio from "../assets/clients/cix-studio.svg";
 import Agrow from "../assets/clients/agrow.svg";
 import Sentrisense from "../assets/clients/sentrisense.svg";
-import CixStudioPFP from "../assets/clients/cix-studio_carmen.svg";
-import AgrowPFP from "../assets/clients/agrow_antonella.svg";
-import SentrisensePFP from "../assets/clients/sentrisense_sebastian.svg";
+import CixStudioPFP from "../images/clients/cix-studio_carmen.png";
+import AgrowFPF from "../images/clients/agrow_antonella.png";
+import SentrisensePFP from "../images/clients/sentrisense_sebastian.png";
 import QuoteIconL from "../assets/quote_icon_L.svg";
 import QuoteIconR from "../assets/quote_icon_R.svg";
 import NextArrowOFF from "../assets/arrow_next.svg";
@@ -68,7 +68,7 @@ function SimpleSlider() {
 
   return (
     <div id="testimonies.desktop" className="xl:py-20 py-14 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-8 text-green">Empowering Our Allies</h2>
+      <h2 className="text-4xl font-bold text-center mb-8 text-green">Empowering Our Allies</h2>
       <div className='container flex flex-wrap justify-center items-start gap-4 text-olive-light mx-auto' style={{ position: 'relative' }}>
       <Slider className='container mx-auto px-10 sm:px-8 lg:px-14' {...settings}>
         {testimonials.map((testimonial, index) => (
@@ -82,8 +82,8 @@ function SimpleSlider() {
                 <div id="company">
                   <testimonial.companyLogo className="w-40 mx-auto" alt={`${testimonial.name} company logo`} />
                 </div> 
-                <div id="client" className='flex ml-6'>
-                  <testimonial.avatar className="w-15 h-15" alt={`${testimonial.name} avatar`} />
+                <div id="client" className='flex ml-6 items-center'>
+                  <img src={testimonial.avatar} className="w-12 h-12 rounded-full" alt={`${testimonial.name} avatar`} ></img>
                   <div className='text-left ml-2'>
                     <p className='mb-0'>{testimonial.name}</p>
                     <p className='mb-0'>{testimonial.role}</p>

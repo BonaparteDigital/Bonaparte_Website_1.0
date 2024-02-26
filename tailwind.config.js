@@ -34,6 +34,7 @@ module.exports = {
       },
       fontFamily: {
         raleway: ["'Raleway', sans-serif"],
+        mulish: ["'Raleway', sans-serif"],
       },
       backgroundImage: {
         'gradient-hover': 'linear-gradient(to right, #4CAF50, #8BC34A)',
