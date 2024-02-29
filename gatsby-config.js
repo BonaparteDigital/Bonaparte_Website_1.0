@@ -19,6 +19,14 @@ module.exports = {
       }
     }
   },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `posts`,
+      path: `${__dirname}/src/pages/blog`,
+    },
+  },
+  "gatsby-plugin-mdx",
   "gatsby-plugin-sitemap",
   'gatsby-plugin-robots-txt',
   {
@@ -67,8 +75,8 @@ module.exports = {
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      'name': 'pages',
+      'path': './src/pages/'
     },
     __key: "pages"
   }]

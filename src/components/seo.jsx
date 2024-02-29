@@ -1,5 +1,6 @@
 import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
+import ImagePreview from "../images/Preview_Image@2x.png"
 
 export const Seo = ({ title, description, pathname, children }) => {
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata()
@@ -14,9 +15,19 @@ export const Seo = ({ title, description, pathname, children }) => {
                                                                                                                                                                         
   return (
     <>
+      <html lang="en" />
       <title>{seo.title}</title>
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+      <meta name="image" content={ImagePreview} />
+      <meta property="og:site_name" content="Bonaparte" />
+      <meta property="og:url" content="https://cix-studio.com/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={ImagePreview} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="628" />
+      <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:url" content={seo.url} />
@@ -32,8 +43,7 @@ export const Seo = ({ title, description, pathname, children }) => {
       "name": "Bonaparte",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+5-601-785-8543",
-        "contactType": "Customer Support"
+        "email": "hello@bonapartedigital.com",
       }
     }
   `}
