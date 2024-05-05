@@ -2,7 +2,7 @@ import * as React from "react"
 import NavBar from "../components/navbar"
 import Footer from "../components/footer"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ children }) => {
   return (
     <div id="global-wrapper" className="flex flex-col min-h-screen bg-olive">
       <NavBar />

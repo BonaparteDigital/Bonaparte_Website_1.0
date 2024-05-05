@@ -26,7 +26,14 @@ module.exports = {
       path: `${__dirname}/src/pages/blog`,
     },
   },
-  "gatsby-plugin-mdx",
+  { 
+    resolve: `gatsby-plugin-mdx`, 
+    options: { 
+        defaultLayouts: {
+            default: require.resolve("./src/components/PostLayout.js"),
+        },
+    },
+},  
   "gatsby-plugin-sitemap",
   'gatsby-plugin-robots-txt',
   {

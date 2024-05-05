@@ -91,4 +91,4 @@ export const Head = () => (
   <Seo
   title="Bonaparte | Digital Strategist"
   description=""/>
-  )
+)
