@@ -41,9 +41,9 @@ const Home = () => {
           <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
             <span className="relative text-white">Conquer?</span></span></h2></div>
           <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
-          <a href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+          <a class="cta_book_rdv" href='https://calendly.com/hellobonaparte/meet-greet'><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-            <a href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+          <a class="cta_contact" href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
             onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
           </div>  
         </div>
