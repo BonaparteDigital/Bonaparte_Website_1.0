@@ -26,14 +26,15 @@ module.exports = {
       path: `${__dirname}/src/pages/blog`,
     },
   },
-  { 
-    resolve: `gatsby-plugin-mdx`, 
-    options: { 
-        defaultLayouts: {
-            default: require.resolve("./src/components/PostLayout.js"),
-        },
-    },
-},  
+  "gatsby-transformer-remark",
+  {
+  resolve: `gatsby-source-contentful`,
+  options: {
+    spaceId: "5hy0kp0a3gdu",
+    accessToken: "qJRqfv0WEcRNsyRedPqKOLU96wJKh-jAeJHEsUX7ZJo",
+  },
+},
+  "gatsby-plugin-mdx",  
   "gatsby-plugin-sitemap",
   'gatsby-plugin-robots-txt',
   {

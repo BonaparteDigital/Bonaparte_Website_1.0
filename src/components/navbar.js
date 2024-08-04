@@ -47,7 +47,7 @@ const Header = () => {
               </nav>
          </div>
          <div id="navbar.right" className="hidden md:flex">
-            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
+            <a class="cta_book_rdv" href='https://calendly.com/hellobonaparte/meet-greet' aria-label="Book RDV" className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
          </div>
        </div>
       </div>
