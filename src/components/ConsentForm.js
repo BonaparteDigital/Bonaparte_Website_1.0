@@ -17,7 +17,7 @@ export function ConsentForm({ color }) {
     }, []);
 
     useEffect(() => {
-        if (cookies.get("COOKIE_NAME") !== undefined) {
+        if (cookies.get("CookieBanner") !== undefined) {
             setDecisionMade(true)
         } else {
             setDecisionMade(false)
