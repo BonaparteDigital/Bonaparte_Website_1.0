@@ -20,7 +20,7 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={ImagePreview} />
       <meta property="og:site_name" content="Bonaparte" />
-      <meta property="og:url" content="https://cix-studio.com/" />
+      <meta property="og:url" content="https://bonapartedigital.com/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />

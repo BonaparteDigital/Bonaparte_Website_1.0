@@ -43,11 +43,11 @@ const Header = () => {
               <nav className="md:text-lg hidden md:flex">
                 <a className="nav-link decoration-orange mr-5" href="#strategies">Strategies</a>
                 <a className="nav-link decoration-orange mr-5" href="#testimonies">Testimonies</a>
-               {/*<a className="hover:underline underline-offset-8 mr-5" href="#insights">Insights</a>*/}
+               {/*<a className="nav-link hover:underline underline-offset-8 mr-5" href="/blog">Insights</a>*/}
               </nav>
          </div>
          <div id="navbar.right" className="hidden md:flex">
-            <a href='https://calendly.com/hellobonaparte/meet-greet' className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
+            <a class="cta_book_rdv" href='https://calendly.com/hellobonaparte/meet-greet' aria-label="Book RDV" className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
          </div>
        </div>
       </div>
@@ -56,7 +56,7 @@ const Header = () => {
         <div id="sections" className='pt-10 mb-20'>
           <a className="mt-20 px-4 py-4 block decoration-primary decoration-2" href="#strategies" onClick={handleCloseModal} >strategies</a>
           <a className="px-4 py-4 block decoration-primary decoration-2" href="#testimonies" onClick={handleCloseModal} >testimonies</a>
-          {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="#insights" onClick={handleCloseModal} >insights</a>*/}
+          {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="/blog" onClick={handleCloseModal} >insights</a>*/}
         </div>
         <div>
            <Link to="https://calendly.com/hellobonaparte/meet-greet" className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book RDV</Link>
