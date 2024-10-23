@@ -43,7 +43,7 @@ const Header = () => {
               <nav className="md:text-lg hidden md:flex">
                 <a className="nav-link decoration-orange mr-5" href="#strategies">Strategies</a>
                 <a className="nav-link decoration-orange mr-5" href="#testimonies">Testimonies</a>
-               {/*<a className="hover:underline underline-offset-8 mr-5" href="#insights">Insights</a>*/}
+               {/*<a className="nav-link hover:underline underline-offset-8 mr-5" href="/blog">Insights</a>*/}
               </nav>
          </div>
          <div id="navbar.right" className="hidden md:flex">
@@ -56,7 +56,7 @@ const Header = () => {
         <div id="sections" className='pt-10 mb-20'>
           <a className="mt-20 px-4 py-4 block decoration-primary decoration-2" href="#strategies" onClick={handleCloseModal} >strategies</a>
           <a className="px-4 py-4 block decoration-primary decoration-2" href="#testimonies" onClick={handleCloseModal} >testimonies</a>
-          {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="#insights" onClick={handleCloseModal} >insights</a>*/}
+          {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="/blog" onClick={handleCloseModal} >insights</a>*/}
         </div>
         <div>
            <Link to="https://calendly.com/hellobonaparte/meet-greet" className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book RDV</Link>

@@ -16,19 +16,27 @@ import PrevArrowOFF from "../assets/arrow_prev.svg";
 
 const testimonials = [
   {
+    avatar: AgrowFPF,
+    name: "Antonella Maggioni",
+    role: "CEO",
+    companyLogo: Agrow,
+    quote: "Working with BONAPARTE was key to the creation and redefinition of our brand and logo, making our message clearer and deeply resonating with our target audience. Thanks to their strategic and creative approach, we were able to enhance our market positioning and significantly increase our brand awareness.",
+  },
+  {
     avatar: SentrisensePFP,
     name: "Sebastián Cerone",
     role: "Co-CEO",
     companyLogo: Sentrisense,
-    quote: "Bonaparte has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
+    quote: "BONAPARTE has been instrumental in refining Sentrisense's brand language and content, elevating our message to resonate clearly with our audience. Their strategic approach in expanding our reach has not only built strong brand awareness but also significantly contributed to our success last year. Truly transformative!",
   },
   {
     avatar: CixStudioPFP,
     name: "Carmen Miroglio Vázquez",
     role: "Director of Operations",
     companyLogo: CixStudio,
-    quote: "Starting with a powerful new brand identity created by Bonaparte, including our logo and website, they laid a solid foundation for Cix Studio's growth in our industry. Their continuous consulting services have been pivotal in expanding our customer reach and solidifying our position in the global market.",
+    quote: "Starting with a powerful new brand identity created by BONAPARTE, including our logo and website, they laid a solid foundation for Cix Studio's growth in our industry. Their continuous consulting services have been pivotal in expanding our customer reach and solidifying our position in the global market.",
   },
+  
   // Add more testimonials below
 ];
 

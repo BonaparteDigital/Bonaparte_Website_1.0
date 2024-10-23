@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="">
               <Link to="#strategies" className="px-4 hover:text-olive">Strategies</Link>
               <Link to="#testimonies" className="px-4 hover:text-olive">Testimonies</Link>
-              {/*<Link to="/insights" className="px-4 hover:text-olive">Insights</Link>*/}
+              <Link to="/blog" className="px-4 hover:text-olive">Blog</Link>
             </div>
             <div id="socialmedia_icons" className="flex space-x-6">
              <Link to="https://x.com/bonapartedigital" aria-label="Follow us on X"><IconX className="h-8" alt=""/></Link>

@@ -13,6 +13,13 @@ import QuoteIconL from "../assets/quote_icon_L.svg";
 
 const testimonial = [
   {
+    avatar: AgrowFPF,
+    name: "Antonella Maggioni",
+    role: "CEO",
+    companyLogo: Agrow,
+    quote: "Working with BONAPARTE was key to the creation and redefinition of our brand and logo, making our message clearer and deeply resonating with our target audience. Thanks to their strategic and creative approach, we were able to enhance our market positioning and significantly increase our brand awareness.",
+  },
+  {
     avatar: SentrisensePFP,
     name: "Sebastián Cerone",
     role: "Co-CEO",

@@ -1,6 +1,11 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Bonaparte | Your Digital Strategist`,
@@ -19,19 +24,12 @@ module.exports = {
       }
     }
   },
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `posts`,
-      path: `${__dirname}/src/pages/blog`,
-    },
-  },
   "gatsby-transformer-remark",
   {
   resolve: `gatsby-source-contentful`,
   options: {
-    spaceId: "5hy0kp0a3gdu",
-    accessToken: "qJRqfv0WEcRNsyRedPqKOLU96wJKh-jAeJHEsUX7ZJo",
+    spaceId: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
   },
 },
   "gatsby-plugin-mdx",  
