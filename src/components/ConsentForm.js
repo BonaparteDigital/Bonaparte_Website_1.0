@@ -46,6 +46,8 @@ export function ConsentForm({ color }) {
         decisionMade ? (
             <></>
         ) : (
+            <>
+            <p>Cookie banner should be here</p> {/* Add this temporarily */}
             <FloatingBanner
                 color={color}
                 header="Consent Header"
@@ -62,6 +64,7 @@ export function ConsentForm({ color }) {
                         handleDecision("denied")
                     }
                 } />
+            </>
         )
     )
 }
