@@ -32,7 +32,7 @@ export function ConsentForm({ color }) {
             'ad_personalization': outcome,
         }
 
-        cookies.set("DigitalPact", consent, {
+        cookies.set("CookieBanner", consent, {
             expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
             path: "/",
             domain: "bonapartedigital.com"
