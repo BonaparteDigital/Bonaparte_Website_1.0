@@ -4,7 +4,7 @@ import Cookies from "universal-cookie"
 import PropTypes from "prop-types"
 
 export function ConsentForm({ color }) {
-    const [decisionMade, setDecisionMade] = useState(true) // start with true to avoid flashing
+    const [decisionMade, setDecisionMade] = useState(false) // start with true to avoid flashing
     const cookies = useMemo(() => new Cookies(), []);
 
     function gtag() {
