@@ -11,13 +11,13 @@ export function CookieBanner({
   onDeny,
 }) {
   return (
-    <div className={`fixed bottom-0 inset-x-0 pb-2 sm:pb-5`} style={{ zIndex: "2000" }}>
+    <div className={`fixed bottom-0 inset-x-0 pb-1 sm:pb-1`} style={{ zIndex: "2000" }}>
       <div className="max-w-screen-xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className={`p-2 rounded-lg bg-${color}-600 shadow-lg sm:p-3`}>
+        <div className={`p-2 rounded-lg bg-green shadow-lg sm:p-3`}>
           <div className="flex items-center justify-between flex-wrap">
             <div className="sm:flex-1 flex items-center">
               <div className="flex-col flex">
-                <div className={`ml-3 font-bold text-xl text-${color}-300`} > {header}</div>
+                <div className={`ml-3 font-bold text-xl text-olive`}> {header}</div>
                 <div className="ml-3 font-medium text-white">
                   <span className="md:hidden">{message}</span>
                   <span className="hidden md:inline">{message}</span>
@@ -30,7 +30,7 @@ export function CookieBanner({
                   <div className="rounded-md shadow-sm">
                     {onAccept !== undefined && (
                       <button
-                        className={`flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-${color}-600 bg-white hover:text-${color}-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150`}
+                        className={`flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-full text-green bg-olive hover:text-orange focus:outline-none focus:shadow-outline transition ease-in-out duration-150`}
                         onClick={onAccept}
                       >
                         {acceptText}
@@ -42,7 +42,7 @@ export function CookieBanner({
               {denyText !== undefined && (
                 <div className="flex-shrink-0 sm:order-3 sm:ml-2">
                   <button
-                    className={`flex items-center justify-center px-4 py-2 text-sm leading-5 font-medium rounded-md text-${color}-200 bg-${color}-600 border-${color}-500 border-2 hover:text-${color}-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150`}
+                    className={`flex items-center justify-center px-4 py-2 text-sm leading-5 font-medium rounded-md text-olive bg-green hover:text-orange focus:outline-none focus:shadow-outline transition ease-in-out duration-150`}
                     onClick={onDeny}
                   >
                     {denyText}
@@ -57,7 +57,7 @@ export function CookieBanner({
   )
 }
 
-FloatingBanner.propTypes = {
+CookieBanner.propTypes = {
   color: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   header: PropTypes.string.isRequired,
@@ -67,6 +67,6 @@ FloatingBanner.propTypes = {
   onDeny: PropTypes.func.isRequired,
 }
 
-FloatingBanner.defaultProps = {
+CookieBanner.defaultProps = {
   color: "blue",
 }

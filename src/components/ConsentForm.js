@@ -4,7 +4,7 @@ import Cookies from "universal-cookie"
 import PropTypes from "prop-types"
 
 export function ConsentForm({ color }) {
-    const [decisionMade, setDecisionMade] = useState(false) // start with true to avoid flashing
+    const [decisionMade, setDecisionMade] = useState(true) // start with true to avoid flashing
     const cookies = useMemo(() => new Cookies(), []);
 
     function gtag() {
@@ -46,14 +46,12 @@ export function ConsentForm({ color }) {
         decisionMade ? (
             <></>
         ) : (
-            <>
-            <p>Cookie banner should be here</p> {/* Add this temporarily */}
-            <FloatingBanner
+            <CookieBanner
                 color={color}
-                header="Consent Header"
-                message="Consent message"
-                acceptText="Yes"
-                denyText="No"
+                header="Permission to analyze?"
+                message="We collect cookies to analyze traffic and performance, but never personal data. Do we have your consent to proceed?"
+                acceptText="Proceed"
+                denyText="Hold Off!"
                 onAccept={
                     () => {
                         handleDecision("granted")
@@ -64,7 +62,6 @@ export function ConsentForm({ color }) {
                         handleDecision("denied")
                     }
                 } />
-            </>
         )
     )
 }
