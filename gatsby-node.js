@@ -1,5 +1,16 @@
 const path = require('path');
 
+// Ensure slug is part of the ContentfulBlogPost type
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type ContentfulBlogPost implements Node {
+      slug: String
+    }
+  `);
+};
+
+// Create pages for each blog post
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
