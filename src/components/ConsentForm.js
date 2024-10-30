@@ -3,7 +3,7 @@ import { CookieBanner } from "./CookieBanner";
 import Cookies from "universal-cookie";
 import PropTypes from "prop-types";
 
-export function ConsentForm({ color }) {
+export function ConsentForm() {
     const [decisionMade, setDecisionMade] = useState(true); // start with true to avoid flashing
     const cookies = useMemo(() => new Cookies(), []);
 
@@ -13,15 +13,7 @@ export function ConsentForm({ color }) {
     }
 
     const sendConsent = useCallback((consent) => {
-        gtag('consent', 'default', {
-            'ad_storage': consent.ad_storage,
-            'analytics_storage': consent.analytics_storage,
-            'ad_user_data': consent.ad_user_data,
-            'ad_personalization': consent.ad_personalization,
-            'functionality_storage': consent.functionality_storage,
-            'personalization_storage': consent.personalization_storage,
-            'security_storage': consent.security_storage
-        });
+        gtag('consent', 'default', consent);
     }, []);
 
     useEffect(() => {
@@ -58,7 +50,6 @@ export function ConsentForm({ color }) {
             <></>
         ) : (
             <CookieBanner
-                color={color}
                 header="Permission to analyze?"
                 message="We collect cookies to analyze traffic and performance, but never personal data. Do we have your consent to proceed?"
                 acceptText="Proceed"
@@ -69,11 +60,3 @@ export function ConsentForm({ color }) {
         )
     );
 }
-
-ConsentForm.propTypes = {
-    color: PropTypes.string.isRequired,
-};
-
-ConsentForm.defaultProps = {
-    color: "blue",
-};
