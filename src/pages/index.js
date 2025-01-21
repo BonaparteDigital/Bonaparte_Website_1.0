@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/layout";
 import { Seo } from "../components/seo";
+import { StaticImage } from "gatsby-plugin-image";
 import Strategies from "../components/strategies";
 import TestimoniesDesktop from "../components/testimonies_desktop";
 import TestimoniesMobile from "../components/testimonies_mobile";
@@ -8,6 +9,7 @@ import Google from "../assets/google_partner.svg";
 import Meta from "../assets/meta_business_partner.svg";
 import Semrush from "../assets/semrush_agency_partner.svg";
 import Amazon from "../assets/amazon_ads.svg";
+import HubSpot from "../assets/hubspot_partner.svg";
 
 const Home = () => {
   const [effectButtonOne, setEffectButtonOne] = useState(false);
@@ -53,11 +55,13 @@ const Home = () => {
         <div className="md:w-2/5">
           <h2 className="text-xl md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
         </div>
-        <div id="vendor_logo" className="flex flex-wrap md:w-4/5">
+        <div id="vendor_logo" className="flex flex-wrap items-center md:w-4/5">
             <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Google alt="Google Partner" className="h-10"/></div>
             <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Meta alt="Meta Partner" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><Semrush alt="SemRush Agency Partner" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><Amazon alt="Amazon Ads" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Semrush alt="SemRush Agency Partner" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Amazon alt="Amazon Ads" className="h-10"/></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://ecosystem.hubspot.com/marketplace/solutions/bonaparte" target="_blank" rel="noopener noreferrer"><HubSpot alt="HubSpot" className="h-12"/></a></div>
+            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://www.designrush.com/" target="_blank" rel="noopener noreferrer"><StaticImage src="../images/design_rush_agency_partner.png" alt="Design Rush" className="w-24"/></a></div>
         </div>
       </div>
       </div>
