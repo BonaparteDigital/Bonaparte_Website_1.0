@@ -24,7 +24,7 @@ const Footer = () => {
              <Link to="mailto:hello@bonapartedigital.com" aria-label="Send us an email"><IconMail className="h-8" alt="email"/></Link>
           </div>
           <div id="copyright" className="text-center">
-            <p>© {new Date().getFullYear()} BONAPARTE | All Rights Reserved | {/*<Link to="/privacy-policy">Privacy Policy</Link>*/}</p>
+            <p>© {new Date().getFullYear()} BONAPARTE | All Rights Reserved | <Link to="/privacy-policy">Privacy Policy</Link></p>
           </div>
         </div>
         <div id="footer_content_desktop" className="hidden md:flex md:flex-col mx-auto px-4">
