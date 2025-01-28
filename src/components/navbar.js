@@ -43,7 +43,7 @@ const Header = () => {
               <nav className="md:text-lg hidden md:flex">
                 <a className="nav-link decoration-orange mr-5" href="https://services.bonapartedigital.com/?utm_source=home&utm_medium=navbar&utm_campaign=evergreen">Services</a>
                 <a className="nav-link decoration-orange mr-5" href="#strategies">Strategies</a>
-                <a className="nav-link decoration-orange mr-5" href="#testimonies">Testimonies</a>
+                <a className="nav-link decoration-orange mr-5" href="#testimonies">Testimonials</a>
                {/*<a className="nav-link hover:underline underline-offset-8 mr-5" href="/blog">Insights</a>*/}
               </nav>
          </div>
@@ -57,7 +57,7 @@ const Header = () => {
         <div id="sections" className='pt-10 mb-20'>
           <a className="mt-20 px-4 py-4 block decoration-primary decoration-2" href="https://services.bonapartedigital.com/?utm_source=home&utm_medium=navbar&utm_campaign=evergreen" onClick={handleCloseModal} >services</a>
           <a className="px-4 py-4 block decoration-primary decoration-2" href="#strategies" onClick={handleCloseModal} >strategies</a>
-          <a className="px-4 py-4 block decoration-primary decoration-2" href="#testimonies" onClick={handleCloseModal} >testimonies</a>
+          <a className="px-4 py-4 block decoration-primary decoration-2" href="#testimonies" onClick={handleCloseModal} >testimonials</a>
           {/*<a className="px-4 py-4 block decoration-primary decoration-2" href="/blog" onClick={handleCloseModal} >insights</a>*/}
         </div>
         <div>
