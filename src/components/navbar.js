@@ -6,16 +6,15 @@ import OpenIcon from "../assets/icon_menu_open.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // Modal Open-Close call
-  const [isScrolled, setIsScrolled] = useState(false); // State to track if the page has been scrolled
+  const [isScrolled, setIsScrolled] = useState(false); // Track scrolling
+  const [effectButtonOne, setEffectButtonOne] = useState(false); // Button animation state
 
   useEffect(() => {
     const handleScroll = () => {
-      const yOffset = window.scrollY;
-      setIsScrolled(yOffset > 50);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -48,7 +47,8 @@ const Header = () => {
               </nav>
          </div>
          <div id="navbar.right" className="hidden md:flex">
-            <a class="cta_book_rdv" href='https://calendly.com/hellobonaparte/meet-greet' aria-label="Book RDV" className="md:inline-block text-md bg-green text-olive px-6 py-3 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5">Book RDV</a>
+         <a class="cta_book_rdv" href='https://services.bonapartedigital.com/meetings/bonaparte' aria-label="Book RDV"><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[120px] h-[40px] text-md bg-green text-olive rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
          </div>
        </div>
       </div>
