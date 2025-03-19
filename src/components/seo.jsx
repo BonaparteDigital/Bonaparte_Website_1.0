@@ -36,16 +36,16 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:creator" content={seo.twitterUsername} />
       <script type="application/ld+json">
     {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "url": "https://bonapartedigital.com",
-      "name": "Bonaparte",
-      "contactPoint": {
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://bonapartedigital.com",
+    "name": "Bonaparte",
+    "contactPoint": {
         "@type": "ContactPoint",
-        "email": "hello@bonapartedigital.com",
-      }
+        "email": "hello@bonapartedigital.com"
     }
+}
   `}
     </script>
     </>
