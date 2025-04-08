@@ -39,9 +39,9 @@ module.exports = {
       excludes: [`/privacy-policy`],
       createLinkInHead: true,
       resolveSiteUrl: () => `https://bonapartedigital.com`,
-      serialize: () => [
+      serialize: ({ siteUrl }) => [
         {
-          url: `https://bonapartedigital.com/`,
+          url: `${siteUrl}/`,
           changefreq: `monthly`,
           priority: 1.0,
         },
@@ -63,7 +63,7 @@ module.exports = {
       ],
     },
   },
-  'gatsby-plugin-robots-txt',
+    'gatsby-plugin-robots-txt',
   {
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
