@@ -33,7 +33,36 @@ module.exports = {
   },
 },
   "gatsby-plugin-mdx",  
-  "gatsby-plugin-sitemap",
+  {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      excludes: [`/privacy-policy`],
+      createLinkInHead: true,
+      resolveSiteUrl: () => `https://bonapartedigital.com`,
+      serialize: () => [
+        {
+          url: `https://bonapartedigital.com/`,
+          changefreq: `monthly`,
+          priority: 1.0,
+        },
+        {
+          url: `https://services.bonapartedigital.com/`,
+          changefreq: `monthly`,
+          priority: 0.8,
+        },
+        {
+          url: `https://services.bonapartedigital.com/seo`,
+          changefreq: `monthly`,
+          priority: 0.8,
+        },
+        {
+          url: `https://services.bonapartedigital.com/digital-advertising`,
+          changefreq: `monthly`,
+          priority: 0.8,
+        },
+      ],
+    },
+  },
   'gatsby-plugin-robots-txt',
   {
     resolve: "gatsby-plugin-google-tagmanager",

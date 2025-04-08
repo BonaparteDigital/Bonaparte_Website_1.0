@@ -2,7 +2,7 @@ import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 import ImagePreview from "../images/Preview_Image@2x.png"
 
-export const Seo = ({ title, description, pathname, children }) => {
+export const Seo = ({ title, description, pathname, meta = [], children }) => {
   const { title: defaultTitle, description: defaultDescription, image, siteUrl, twitterUsername } = useSiteMetadata()
 
   const seo = {
@@ -34,13 +34,16 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
+      {meta.map(({ name, content }, index) => (
+  <meta key={index} name={name} content={content} />
+))}
       <script type="application/ld+json">
     {`
 {
     "@context": "https://schema.org",
     "@type": "Organization",
     "url": "https://bonapartedigital.com",
-    "name": "Bonaparte",
+    "name": "BONAPARTE",
     "contactPoint": {
         "@type": "ContactPoint",
         "email": "hello@bonapartedigital.com"
