@@ -39,7 +39,9 @@ module.exports = {
       excludes: [`/privacy-policy`],
       createLinkInHead: true,
       resolveSiteUrl: () => `https://bonapartedigital.com`,
-      serialize: ({ siteUrl }) => [
+      serialize: ({ site }) => {
+        const siteUrl = site.siteMetadata.siteUrl;
+        return [
         {
           url: `${siteUrl}/`,
           changefreq: `monthly`,
@@ -60,7 +62,8 @@ module.exports = {
           changefreq: `monthly`,
           priority: 0.8,
         },
-      ],
+      ];
+    },
     },
   },
     'gatsby-plugin-robots-txt',
