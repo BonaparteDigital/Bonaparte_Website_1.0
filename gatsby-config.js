@@ -12,7 +12,7 @@ module.exports = {
     description: `Meet BONAPARTE—Your Digital Strategist. We're not just a digital marketing agency; we're your strategic partners in world-class branding and digital domination. Forget buzzwords and fluff. We deliver hard-hitting results that last.`,
     siteUrl: `https://bonapartedigital.com/`,
     image: "/images/Preview_Image@2x.png",
-    twitterUsername: `@bonapartedigital`,
+    twitterUsername: `@hellobonaparte`,
   },
   plugins: ["gatsby-plugin-postcss",
   "gatsby-plugin-image",
@@ -33,40 +33,8 @@ module.exports = {
   },
 },
   "gatsby-plugin-mdx",  
-  {
-    resolve: `gatsby-plugin-sitemap`,
-    options: {
-      excludes: [`/privacy-policy`],
-      createLinkInHead: true,
-      resolveSiteUrl: () => `https://bonapartedigital.com`,
-      serialize: ({ site }) => {
-        const siteUrl = site.siteMetadata.siteUrl;
-        return [
-        {
-          url: `${siteUrl}/`,
-          changefreq: `monthly`,
-          priority: 1.0,
-        },
-        {
-          url: `https://services.bonapartedigital.com/`,
-          changefreq: `monthly`,
-          priority: 0.8,
-        },
-        {
-          url: `https://services.bonapartedigital.com/seo`,
-          changefreq: `monthly`,
-          priority: 0.8,
-        },
-        {
-          url: `https://services.bonapartedigital.com/digital-advertising`,
-          changefreq: `monthly`,
-          priority: 0.8,
-        },
-      ];
-    },
-    },
-  },
-    'gatsby-plugin-robots-txt',
+  "gatsby-plugin-sitemap",
+  'gatsby-plugin-robots-txt',
   {
     resolve: "gatsby-plugin-google-tagmanager",
     options: {
