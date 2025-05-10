@@ -52,5 +52,6 @@ export const Head = () => (
       title="Privacy Policy | BONAPARTE"
       description="Learn how BONAPARTE collects, uses, and protects your personal data. Transparent practices to ensure your privacy is always respected"
       meta={[{ name: "robots", content: "noindex, follow" }]}
+      robots="noindex, nofollow"
     />
   )

@@ -94,5 +94,6 @@ export default Home;
 export const Head = () => (
   <Seo
   title="Bonaparte | Digital Strategist"
-  description="We're your strategic partners in branding and digital domination. Forget buzzwords—we deliver hard-hitting results that stand the test of time."/>
+  description="We're your strategic partners in branding and digital domination. Forget buzzwords—we deliver hard-hitting results that stand the test of time."
+  robots="index, follow"/>
 )

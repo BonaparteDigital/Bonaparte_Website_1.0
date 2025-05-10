@@ -24,5 +24,7 @@ export default NotFound;
 export const Head = () => (
     <Seo
     title="Bonaparte | Not Found"
-    description=""/>
+    description=""
+    robots="noindex, nofollow"
+    />
     )

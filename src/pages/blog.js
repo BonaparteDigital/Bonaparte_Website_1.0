@@ -104,5 +104,6 @@ export const Head = () => (
   <Seo
     title="Bonaparte | Strategic Dispatch"
     description="Your source for strategic insights and actionable digital marketing advice."
+    robots="index, follow"
   />
 );
