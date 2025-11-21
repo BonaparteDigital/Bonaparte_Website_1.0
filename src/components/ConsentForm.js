@@ -12,7 +12,7 @@ export function ConsentForm() {
     // Cookies solo existe en browser
     const cookies = useMemo(() => {
         if (!isBrowser) return null;
-        const Cookies = require("universal-cookie").default;
+        const Cookies = require("universal-cookie");
         return new Cookies();
     }, [isBrowser]);
 

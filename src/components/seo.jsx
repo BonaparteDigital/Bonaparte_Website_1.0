@@ -34,7 +34,7 @@ export const Seo = ({ title, description, pathname, meta = [], children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
-      <meta name="robots" content={robots} />
+      <meta name="robots" content="index, follow" />
       {meta.map(({ name, content }, index) => (
   <meta key={index} name={name} content={content} />
 ))}
