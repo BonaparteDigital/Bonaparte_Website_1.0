@@ -14,7 +14,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const blogPostLayout = path.resolve('./src/components/post_layout.js');
+  const blogPostLayout = path.resolve('./src/components/post_template.js');
 
   const result = await graphql(`
     {

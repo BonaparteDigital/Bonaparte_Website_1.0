@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
 import { CookieBanner } from "./CookieBanner";
-import PropTypes from "prop-types";
 
 export function ConsentForm() {
 
