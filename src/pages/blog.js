@@ -16,11 +16,7 @@ const Blog = () => {
             id
             slug
             publishedDate(formatString: "Do MMMM, YYYY")
-            abstract {
-              childMarkdownRemark {
-                excerpt(pruneLength: 150)
-              }
-            }
+            abstract
             featuredImage {
               gatsbyImageData(layout: CONSTRAINED, width: 800, height: 400)
             }
@@ -61,7 +57,7 @@ const Blog = () => {
                 <Link to={`/blog/${featuredPost.node.slug}`} className="text-green font-semibold hover:text-olive">
                   <h2 className="text-4xl font-bold font-mullish my-4">{featuredPost.node.title}</h2>
                 </Link>
-                <p className="text-gray-700 mb-6">{featuredPost.node.abstract.childMarkdownRemark.excerpt}</p>
+                <p className="text-gray-700 mb-6">{featuredPost.node.abstract}</p>
                 <p className="text-gray-500 mb-4">{featuredPost.node.publishedDate}</p>
               </div>
             )}

@@ -50,7 +50,7 @@ const Footer = () => {
               <Link to="https://services.bonapartedigital.com/?utm_source=home&utm_medium=navbar&utm_campaign=evergreen" className="px-4 hover:text-olive">Services</Link>
               <Link to="#strategies" className="px-4 hover:text-olive">Strategies</Link>
               <Link to="#testimonies" className="px-4 hover:text-olive">Testimonies</Link>
-             {/* <Link to="/blog" className="px-4 hover:text-olive">Blog</Link> */}
+              <Link to="/blog" className="px-4 hover:text-olive">Blog</Link>
             </div>
             <div id="socialmedia_icons" className="flex space-x-6">
              <Link to="https://x.com/hellobonaparte" aria-label="Follow us on X"><IconX className="h-8" alt=""/></Link>
