@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import Layout from "../components/layout";
 import { Seo } from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
-import Strategies from "../components/strategies";
-import TestimoniesDesktop from "../components/testimonies_desktop";
-import TestimoniesMobile from "../components/testimonies_mobile";
 import Google from "../assets/google_partner.svg";
 import Meta from "../assets/meta_business_partner.svg";
 import Semrush from "../assets/semrush_agency_partner.svg";
 import Amazon from "../assets/amazon_ads.svg";
 import HubSpot from "../assets/hubspot_partner.svg";
 
+const Strategies = lazy(() => import('../components/strategies'));
+const TestimoniesDesktop = lazy(() => import('../components/testimonies_desktop'));
+const TestimoniesMobile = lazy(() => import('../components/testimonies_mobile'));
+
 const Home = () => {
   const [effectButtonOne, setEffectButtonOne] = useState(false);
   const [effectButtonTwo, setEffectButtonTwo] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
   
   return (
     <Layout title="Bonaparte">
@@ -36,7 +40,7 @@ const Home = () => {
         <div className="arrow hidden md:block"></div>
       </div>  
       <div id="strategies" className="my-20">
-        <Strategies />
+        {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><Strategies /></Suspense>}
       </div>
       <div id="cta" className="bg-olive px-4 py-10 md:p-10 md:my-10 my-10">
         <div className="container flex flex-col md:flex-row justify-center items-center">
@@ -67,10 +71,14 @@ const Home = () => {
       </div>
        <div id="testimonies">
         <div id="testimonies_mobile" className="block sm:hidden bg-white">
-          <div className="container block sm:hidden"><TestimoniesMobile /></div>
+          <div className="container block sm:hidden">
+            {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesMobile /></Suspense>}
+          </div>
         </div>
         <div id="testimonies_desktop" className="hidden sm:block bg-white">
-          <div className="container hidden sm:block bg-white"><TestimoniesDesktop /></div>
+          <div className="container hidden sm:block bg-white">
+            {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesDesktop /></Suspense>}
+          </div>
         </div>
       </div>
       <div id="cta" className="bg-gradient-to-b from-white to-olive px-4 py-10 md:p-10 mb-6">

@@ -68,6 +68,7 @@ const getCTAContent = (category) => {
 
 const BlogPostTemplate = ({ data }) => {
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [navHeight, setNavHeight] = useState(0)
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterStatus, setNewsletterStatus] = useState('idle') // idle | loading | success | error
 
@@ -78,7 +79,14 @@ const BlogPostTemplate = ({ data }) => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop
       const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100
       setScrollProgress(Math.min(scrollPercentage, 100))
+
+      const header = document.querySelector('header')
+      if (header) setNavHeight(header.offsetHeight)
     }
+
+    const header = document.querySelector('header')
+    if (header) setNavHeight(header.offsetHeight)
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -126,11 +134,11 @@ const BlogPostTemplate = ({ data }) => {
 
   return (
     <PostLayout>
-      {/* Progress Bar - Fixed to top */}
-      <div className="fixed top-0 left-0 w-full h-1 z-50">
+      {/* Progress Bar - Below navbar */}
+      <div className="fixed left-0 w-full h-1 z-[60]" style={{ top: navHeight }}>
         <div
-          className="h-full bg-[#EC8602] transition-all duration-150 ease-out"
-          style={{ width: `${scrollProgress}%` }}
+          className="h-full bg-[#EC8602]"
+          style={{ width: `${scrollProgress}%`, transition: 'width 0.4s cubic-bezier(0.25, 1, 0.5, 1)' }}
         />
       </div>
 
@@ -157,12 +165,12 @@ const BlogPostTemplate = ({ data }) => {
         </nav>
 
         {/* Category + Reading Time */}
-        <div className="flex items-center gap-3 mb-5">
-          {category && (
-            <span className="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-white bg-[#EC8602] rounded-full">
-              {category}
+        <div className="flex items-center gap-3 mb-5 flex-wrap">
+          {category && (Array.isArray(category) ? category : [category]).map((cat) => (
+            <span key={cat} className="inline-block px-3 py-1 text-xs font-bold tracking-widest uppercase text-white bg-[#EC8602] rounded-full">
+              {cat}
             </span>
-          )}
+          ))}
           {readingTime && (
             <span className="text-sm text-gray-500">{readingTime} min read</span>
           )}
@@ -214,7 +222,9 @@ const BlogPostTemplate = ({ data }) => {
                 <p className="text-sm text-[#C0D22D] font-semibold mb-3">{author.jobTitle}</p>
               )}
               {author.bio?.raw && (
-                <p className="text-sm text-gray-300 leading-relaxed mb-4">{author.bio.raw}</p>
+                <div className="text-sm text-gray-300 leading-relaxed mb-4">
+                  {documentToReactComponents(JSON.parse(author.bio.raw))}
+                </div>
               )}
               <div className="flex gap-3">
                 {author.linkedin && (
@@ -375,11 +385,11 @@ const BlogPostTemplate = ({ data }) => {
                     </div>
                   )}
                   <div>
-                    {post.category && (
-                      <span className="inline-block px-2 py-0.5 text-xs font-bold tracking-widest uppercase text-[#EC8602] bg-[#EC8602]/10 rounded-full mb-2">
-                        {post.category}
+                    {post.category && (Array.isArray(post.category) ? post.category : [post.category]).map((cat) => (
+                      <span key={cat} className="inline-block px-2 py-0.5 text-xs font-bold tracking-widest uppercase text-[#EC8602] bg-[#EC8602]/10 rounded-full mb-2 mr-1">
+                        {cat}
                       </span>
-                    )}
+                    ))}
                     <h4 className="font-bold text-[#14271D] group-hover:text-[#EC8602] transition-colors leading-snug mb-2">
                       {post.title}
                     </h4>
