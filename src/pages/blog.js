@@ -51,7 +51,7 @@ const Blog = () => {
     <Layout>
       {/* Page Header */}
       <div className="bg-[#14271D] py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="container">
           <p className="text-[#EC8602] text-xs font-bold uppercase tracking-widest mb-3">
             Bonaparte Intelligence
           </p>
@@ -67,7 +67,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
+      <div className="container py-12 lg:py-16">
 
         {/* ── HERO ── */}
         {hero && (
