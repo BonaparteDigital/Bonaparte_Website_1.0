@@ -117,6 +117,15 @@ html {
   color: #ffffff; /* Change text color on hover */
 }
 
+/* Trigger nav-link animation when the services wrapper (including arrow) is hovered */
+.services-trigger:hover .nav-link::before {
+  transform: scaleY(1) skewY(-3deg);
+  top: 0;
+}
+.services-trigger:hover .nav-link {
+  color: #ffffff;
+}
+
 .arrow,
 .arrow:before {
   position: absolute;

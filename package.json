@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "env-cmd .env gatsby develop",
+    "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -28,7 +28,6 @@
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-mdx": "^5.13.1",
     "gatsby-plugin-postcss": "^6.13.1",
-    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-sitemap": "^6.13.1",
@@ -48,5 +47,9 @@
     "tailwindcss": "^3.4.1",
     "universal-cookie": "^7.2.1",
     "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.0.0",
+    "env-cmd": "^11.0.0"
   }
 }

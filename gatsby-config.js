@@ -16,14 +16,6 @@ module.exports = {
   },
   plugins: ["gatsby-plugin-postcss",
   "gatsby-plugin-image",
-  {
-    resolve: "gatsby-plugin-react-svg",
-    options: {
-      rule: {
-        include: /assets/
-      }
-    }
-  },
   "gatsby-transformer-remark",
   {
   resolve: `gatsby-source-contentful`,

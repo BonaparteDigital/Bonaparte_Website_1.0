@@ -43,18 +43,18 @@ const testimonials = [
 function NextArrow(props) {
   const { onClick } = props;
   return (
-    <div onClick={onClick} className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer">
+    <button onClick={onClick} aria-label="Next testimonial" className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-transparent border-none p-0">
       <NextArrowOFF alt="Next"/>
-    </div>
+    </button>
   );
 }
 
 function PrevArrow(props) {
   const { onClick } = props;
   return (
-    <div onClick={onClick} className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer">
+    <button onClick={onClick} aria-label="Previous testimonial" className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer bg-transparent border-none p-0">
       <PrevArrowOFF alt="Previous"/>
-    </div>
+    </button>
   );
 }
 

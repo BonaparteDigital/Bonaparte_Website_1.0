@@ -6,6 +6,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Seo } from "../components/seo"
 import '../styles/blog-post.css'
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
 // Estimate reading time from Contentful rich text raw JSON
 const getReadingTime = (raw) => {
   try {
@@ -110,6 +112,10 @@ const BlogPostTemplate = ({ data }) => {
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault()
+    if (!EMAIL_RE.test(newsletterEmail)) {
+      setNewsletterStatus('error')
+      return
+    }
     setNewsletterStatus('loading')
     try {
       const response = await fetch(

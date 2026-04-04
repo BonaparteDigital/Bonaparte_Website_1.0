@@ -25,7 +25,7 @@ export function ConsentForm() {
     const sendConsent = useCallback(
         (consent) => {
             if (!isBrowser) return;
-            gtag("consent", "default", consent);
+            gtag("consent", "update", consent);
         },
         [gtag, isBrowser]
     );
@@ -56,7 +56,7 @@ export function ConsentForm() {
         cookies.set("CookieBanner", consent, {
             expires: new Date(new Date().setFullYear(new Date().getFullYear() + 1)),
             path: "/",
-            domain: "bonapartedigital.com",
+            domain: typeof window !== 'undefined' ? window.location.hostname : 'bonapartedigital.com',
         });
 
         sendConsent(consent);

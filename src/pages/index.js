@@ -2,6 +2,7 @@ import React, { useState, useEffect, lazy, Suspense } from "react";
 import Layout from "../components/layout";
 import { Seo } from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
+import FadeIn from "../components/fade-in";
 import Google from "../assets/google_partner.svg";
 import Meta from "../assets/meta_business_partner.svg";
 import Semrush from "../assets/semrush_agency_partner.svg";
@@ -39,60 +40,70 @@ const Home = () => {
         </div>
         <div className="arrow hidden md:block"></div>
       </div>  
-      <div id="strategies" className="my-20">
-        {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><Strategies /></Suspense>}
-      </div>
-      <div id="cta" className="bg-olive px-4 py-10 md:p-10 md:my-10 my-10">
-        <div className="container flex flex-col md:flex-row justify-center items-center">
-          <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
-            <span className="relative text-white">Conquer?</span></span></h2></div>
-          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
-          <a class="cta_book_rdv" href='https://services.bonapartedigital.com/meetings/bonaparte' aria-label="Book RDV"><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-          <a class="cta_contact" href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
-          </div>  
+      <FadeIn>
+        <div id="strategies" className="my-20">
+          {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><Strategies /></Suspense>}
         </div>
-      </div>
-      <div id="backed-by" className="bg-gradient-to-b from-olive to-white py-10 px-2">
-      <div className="container flex flex-col md:flex-row items-center">
-        <div className="md:w-2/5">
-          <h2 className="text-xl md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
-        </div>
-        <div id="vendor_logo" className="flex flex-wrap items-center md:w-4/5">
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Google alt="Google Partner" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Meta alt="Meta Partner" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Semrush alt="SemRush Agency Partner" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Amazon alt="Amazon Ads" className="h-10"/></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://ecosystem.hubspot.com/marketplace/solutions/bonaparte" target="_blank" rel="noopener noreferrer"><HubSpot alt="HubSpot" className="h-12"/></a></div>
-            <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://www.designrush.com/" target="_blank" rel="noopener noreferrer"><StaticImage src="../images/design_rush_agency_partner.png" alt="Design Rush" className="w-24"/></a></div>
-        </div>
-      </div>
-      </div>
-       <div id="testimonies">
-        <div id="testimonies_mobile" className="block sm:hidden bg-white">
-          <div className="container block sm:hidden">
-            {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesMobile /></Suspense>}
+      </FadeIn>
+      <FadeIn>
+        <div id="cta" className="bg-olive px-4 py-10 md:p-10 md:my-10 my-10">
+          <div className="container flex flex-col md:flex-row justify-center items-center">
+            <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
+              <span className="relative text-white">Conquer?</span></span></h2></div>
+            <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
+            <a class="cta_book_rdv" href='https://services.bonapartedigital.com/meetings/bonaparte' aria-label="Book RDV"><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
+            <a class="cta_contact" href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+            </div>
           </div>
         </div>
-        <div id="testimonies_desktop" className="hidden sm:block bg-white">
-          <div className="container hidden sm:block bg-white">
-            {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesDesktop /></Suspense>}
+      </FadeIn>
+      <FadeIn>
+        <div id="backed-by" className="bg-gradient-to-b from-olive to-white py-10 px-2">
+          <div className="container flex flex-col md:flex-row items-center">
+            <div className="md:w-2/5">
+              <h2 className="text-xl md:w-auto w-[300px] text-center md:text-left md:m-auto mb-12">Partnered with industry-leading tactical partners</h2>
+            </div>
+            <div id="vendor_logo" className="flex flex-wrap items-center md:w-4/5">
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Google alt="Google Partner" className="h-10"/></div>
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-10"><Meta alt="Meta Partner" className="h-10"/></div>
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Semrush alt="SemRush Agency Partner" className="h-10"/></div>
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto mb-8"><Amazon alt="Amazon Ads" className="h-10"/></div>
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://ecosystem.hubspot.com/marketplace/solutions/bonaparte" target="_blank" rel="noopener noreferrer"><HubSpot alt="HubSpot" className="h-12"/></a></div>
+                <div className="flex justify-center w-1/2 md:w-1/4 md:m-auto"><a href="https://www.designrush.com/" target="_blank" rel="noopener noreferrer"><StaticImage src="../images/design_rush_agency_partner.png" alt="Design Rush" className="w-24"/></a></div>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="cta" className="bg-gradient-to-b from-white to-olive px-4 py-10 md:p-10 mb-6">
-        <div className="container flex flex-col md:flex-row justify-center items-center">
-        <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
-            <span className="relative text-white">Conquer?</span></span></h2></div>
-          <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
-          <a class="cta_book_rdv" href='https://services.bonapartedigital.com/meetings/bonaparte' aria-label="Book RDV"><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
-          <a class="cta_contact" href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
-            onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
-          </div>  
+      </FadeIn>
+      <FadeIn>
+        <div id="testimonies">
+          <div id="testimonies_mobile" className="block sm:hidden bg-white">
+            <div className="container block sm:hidden">
+              {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesMobile /></Suspense>}
+            </div>
+          </div>
+          <div id="testimonies_desktop" className="hidden sm:block bg-white">
+            <div className="container hidden sm:block bg-white">
+              {mounted && <Suspense fallback={<div className="min-h-[300px]" />}><TestimoniesDesktop /></Suspense>}
+            </div>
+          </div>
         </div>
-      </div>
+      </FadeIn>
+      <FadeIn>
+        <div id="cta" className="bg-gradient-to-b from-white to-olive px-4 py-10 md:p-10 mb-6">
+          <div className="container flex flex-col md:flex-row justify-center items-center">
+            <div className="md:w-1/2 text-xl md:mb-0 mb-8"><h2 className="md:text-5xl md:font-extrabold text-center">Ready to <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
+                <span className="relative text-white">Conquer?</span></span></h2></div>
+            <div className="md:w-1/2 text-xl text-center"><p className="hidden md:block max-w-[380px] mx-auto mb-8">Take your business to new heights with our cutting-edge marketing strategies.</p>
+            <a class="cta_book_rdv" href='https://services.bonapartedigital.com/meetings/bonaparte' aria-label="Book RDV"><button className={`${effectButtonOne && "animate-push"} md:inline-block w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonOne(true);}} onAnimationEnd={() => setEffectButtonOne(false)}>Book RDV</button></a>
+            <a class="cta_contact" href='mailto:hello@bonapartedigital.com' aria-label="Get in Touch with Us"><button className={`${effectButtonTwo && "animate-push"} hidden md:inline-block w-[200px] ml-2 text-lg bg-olive text-green px-8 p-[14px] rounded-full border-2 border-green border-solid transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:transform hover:translate-x-1.5 hover:-translate-y-1.5`}
+              onClick={() => {setEffectButtonTwo(true);}} onAnimationEnd={() => setEffectButtonTwo(false)}>Get in Touch</button></a>
+            </div>
+          </div>
+        </div>
+      </FadeIn>
     </Layout>
   );
 };
