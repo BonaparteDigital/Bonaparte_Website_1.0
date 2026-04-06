@@ -45,10 +45,12 @@ const Header = () => {
                   <svg className="w-3 h-3 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/>
                   </svg>
-                  <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-olive border border-green/10 shadow-[-4px_4px_0_#EC8602] rounded-xl py-2 min-w-[190px] z-50">
-                    <Link to="/services/" className="block px-4 py-2 text-sm font-semibold hover:text-orange transition-colors">All Services</Link>
-                    <Link to="/services/digital-advertising" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Digital Advertising</Link>
-                    <Link to="/services/seo" className="block px-4 py-2 text-sm hover:text-orange transition-colors">SEO</Link>
+                  <div className="absolute top-full left-0 pt-2 hidden group-hover:block min-w-[190px] z-50">
+                    <div className="bg-olive border border-green/10 shadow-[-4px_4px_0_#EC8602] rounded-xl py-2">
+                      <Link to="/services/" className="block px-4 py-2 text-sm font-semibold hover:text-orange transition-colors">All Services</Link>
+                      <Link to="/services/digital-advertising" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Digital Advertising</Link>
+                      <Link to="/services/seo" className="block px-4 py-2 text-sm hover:text-orange transition-colors">SEO</Link>
+                    </div>
                   </div>
                 </div>
                 <Link className="nav-link decoration-orange mr-5" to="/work">Work</Link>
@@ -57,9 +59,11 @@ const Header = () => {
                   <svg className="w-3 h-3 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd"/>
                   </svg>
-                  <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-olive border border-green/10 shadow-[-4px_4px_0_#EC8602] rounded-xl py-2 min-w-[190px] z-50">
-                    <Link to="/blog" className="block px-4 py-2 text-sm font-semibold hover:text-orange transition-colors">Blog</Link>
-                    <Link to="/resources/ads-checklist" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Ads Checklist</Link>
+                  <div className="absolute top-full left-0 pt-2 hidden group-hover:block min-w-[190px] z-50">
+                    <div className="bg-olive border border-green/10 shadow-[-4px_4px_0_#EC8602] rounded-xl py-2">
+                      <Link to="/blog" className="block px-4 py-2 text-sm font-semibold hover:text-orange transition-colors">Blog</Link>
+                      <Link to="/resources/ads-checklist" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Ads Checklist</Link>
+                    </div>
                   </div>
                 </div>
               </nav>
