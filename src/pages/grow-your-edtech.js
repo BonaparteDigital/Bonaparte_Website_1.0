@@ -18,24 +18,25 @@ const T = {
     },
     hero: {
       h1: ["grow your", "edtech"],
-      sub: "We're the full-stack growth unit for education brands — paid media, content production, SEO, and localization, built by people who've lived inside EdTech.",
+      sub: "We build {growth engines} for education companies. Strategy, media, content and localization, run by the operators who scaled Nearpod, BookNook and Common Sense Media.",
+      highlight: "growth engines",
       cta: "Book a strategy call",
     },
     stats: [
-      { num: "$4M+", label: "EdTech revenue unlocked" },
-      { num: "1,000+", label: "Hours of content shipped" },
-      { num: "84%", label: "Average YoY growth" },
-      { num: "47%", label: "YoY new users" },
+      { num: "$4M+", label: "ARR generated in US education" },
+      { num: "1,000+", label: "Digital lessons produced" },
+      { num: "84%", label: "YoY growth in lesson downloads" },
+      { num: "47%", label: "YoY growth in new users" },
     ],
     services: {
       label: "/// SERVICES",
       h2: "A full-stack growth unit for education brands.",
-      sub: "Every service built around how EdTech companies actually grow.",
+      sub: "One team. Strategy, media, content and localization, all calibrated to EdTech decision makers: teachers, districts, parents and learners.",
     },
     cases: {
       label: "/// SELECTED WORK",
       h2: "Operators behind the EdTech brands you already know.",
-      sub: "We don't just consult — we've been inside these products, scaling them.",
+      sub: "Our team has led growth, content and product work for category leaders across K-12, higher ed and lifelong learning.",
     },
     why: {
       label: "/// WHY BONAPARTE FOR EDTECH",
@@ -57,12 +58,12 @@ const T = {
       division: "EdTech Division",
     },
     serviceItems: [
-      { title: "Paid Media", desc: "Performance campaigns on Meta, Google, TikTok, and programmatic — built around EdTech buying seasons and school procurement cycles." },
-      { title: "Social & Content", desc: "Content strategies that earn trust with parents, teachers, and district buyers — not just impressions." },
-      { title: "SEO & Organic", desc: "Compound growth through search — keyword strategy, technical SEO, and content that ranks for how educators actually search." },
-      { title: "Branding", desc: "Visual identity and positioning systems designed for the classroom and the board room — consistent across every learning surface." },
-      { title: "Program Localization", desc: "From a single lesson to a 300-lesson library — translated, adapted, and re-shot if needed for US and LATAM rollouts." },
-      { title: "Content Production", desc: "Curriculum video, interactive assets, and learning experiences — shipped fast, educator-reviewed, and built to scale." },
+      { title: "Paid Media", desc: "Performance campaigns on Meta, Google, TikTok and programmatic, built around education seasonality and district buying cycles." },
+      { title: "Social & Content", desc: "Always-on social, teacher-loved creative and weekly content engines that ship 30+ pieces per week at peak." },
+      { title: "SEO & Organic", desc: "Technical SEO, topical authority and content programs that win the searches parents, teachers and admins actually run." },
+      { title: "Branding", desc: "Positioning, identity and messaging systems for EdTech companies that need to feel both rigorous and human." },
+      { title: "Program Localization", desc: "Translation and cultural adaptation of full programs and lesson libraries, built for LATAM and global rollouts." },
+      { title: "Content Production", desc: "Digital lessons, gamified activities and curriculum-aligned assets, produced and curated by real educators." },
     ],
     caseItems: [
       { tag: "K-12 · ENGAGEMENT", title: "Nearpod (Renaissance)", desc: "Built the full growth engine for one of K-12's most-used engagement platforms — from performance campaigns to content strategy across teachers and district buyers.", chips: ["84% YoY downloads", "47% YoY new users", "1k+ lessons"] },
@@ -91,25 +92,26 @@ const T = {
       book: "Agendar call",
     },
     hero: {
-      h1: ["acelere seu", "edtech"],
-      sub: "Somos a unidade completa de crescimento para marcas de educação — mídia paga, produção de conteúdo, SEO e localização, construída por pessoas que viveram dentro do EdTech.",
+      h1: ["faça crescer sua", "edtech"],
+      sub: "Construímos {motores de crescimento} para empresas de educação. Estratégia, mídia, conteúdo e localização, operados por quem escalou Nearpod, BookNook e Common Sense Media.",
+      highlight: "motores de crescimento",
       cta: "Agendar uma call estratégica",
     },
     stats: [
-      { num: "$4M+", label: "Receita EdTech desbloqueada" },
-      { num: "1.000+", label: "Horas de conteúdo entregues" },
-      { num: "84%", label: "Crescimento médio anual" },
-      { num: "47%", label: "Novos usuários por ano" },
+      { num: "US$ 4M+", label: "ARR gerado em educação nos EUA" },
+      { num: "1.000+", label: "Aulas digitais produzidas" },
+      { num: "84%", label: "Crescimento YoY em downloads de aulas" },
+      { num: "47%", label: "Crescimento YoY em novos usuários" },
     ],
     services: {
       label: "/// SERVIÇOS",
-      h2: "Uma unidade de crescimento completa para marcas de educação.",
-      sub: "Cada serviço construído em torno de como as empresas EdTech realmente crescem.",
+      h2: "Uma unidade de crescimento full-stack para marcas de educação.",
+      sub: "Um único time. Estratégia, mídia, conteúdo e localização, calibrados para os decision makers de EdTech: professores, redes de ensino, pais e alunos.",
     },
     cases: {
       label: "/// TRABALHOS SELECIONADOS",
-      h2: "Operadores por trás das marcas EdTech que você já conhece.",
-      sub: "Não apenas consultamos — estivemos dentro desses produtos, escalando-os.",
+      h2: "Os operadores por trás das EdTechs que você já conhece.",
+      sub: "Nosso time liderou crescimento, conteúdo e produto para líderes em K-12, ensino superior e aprendizagem ao longo da vida.",
     },
     why: {
       label: "/// POR QUE A BONAPARTE PARA EDTECH",
@@ -131,12 +133,12 @@ const T = {
       division: "Divisão EdTech",
     },
     serviceItems: [
-      { title: "Mídia Paga", desc: "Campanhas de performance no Meta, Google, TikTok e programática — construídas em torno das sazonalidades do EdTech e ciclos de compra escolar." },
-      { title: "Social & Conteúdo", desc: "Estratégias de conteúdo que constroem confiança com pais, professores e compradores de distritos — não apenas impressões." },
-      { title: "SEO & Orgânico", desc: "Crescimento composto via busca — estratégia de palavras-chave, SEO técnico e conteúdo que ranqueia para como educadores realmente pesquisam." },
-      { title: "Branding", desc: "Sistemas de identidade visual e posicionamento pensados para a sala de aula e para o conselho — consistentes em todas as superfícies de aprendizado." },
-      { title: "Localização de Programas", desc: "De uma única aula a uma biblioteca de 300 lições — traduzida, adaptada e regravada se necessário para rollouts nos EUA e na LATAM." },
-      { title: "Produção de Conteúdo", desc: "Vídeos curriculares, assets interativos e experiências de aprendizado — entregues com rapidez, revisados por educadores e prontos para escala." },
+      { title: "Mídia Paga", desc: "Campanhas de performance em Meta, Google, TikTok e programática, pensadas para a sazonalidade educacional e os ciclos de compra das redes." },
+      { title: "Social & Conteúdo", desc: "Social always-on, criativos que professores amam e motores de conteúdo com 30+ peças por semana no pico." },
+      { title: "SEO & Orgânico", desc: "SEO técnico, autoridade temática e programas de conteúdo que ganham as buscas reais de pais, professores e gestores." },
+      { title: "Branding", desc: "Posicionamento, identidade e sistemas de mensagem para EdTechs que precisam ser ao mesmo tempo rigorosas e humanas." },
+      { title: "Localização de Programas", desc: "Tradução e adaptação cultural de programas e bibliotecas inteiras de aulas, feito para roll-outs em LATAM e globais." },
+      { title: "Produção de Conteúdo", desc: "Aulas digitais, atividades gamificadas e ativos alinhados ao currículo, produzidos e curados por educadores reais." },
     ],
     caseItems: [
       { tag: "K-12 · ENGAJAMENTO", title: "Nearpod (Renaissance)", desc: "Construímos o motor de crescimento completo de uma das plataformas K-12 mais usadas — de campanhas de performance à estratégia de conteúdo para professores e distritos.", chips: ["84% crescimento YoY em downloads", "47% novos usuários YoY", "1k+ lições"] },
@@ -260,8 +262,12 @@ export default function GrowYourEdTech() {
             <h1 className="font-black leading-none tracking-tight mb-8" style={{ fontSize: "clamp(60px, 10vw, 128px)", color: DARK, lineHeight: 0.88, letterSpacing: "-0.03em" }}>
               {t.hero.h1[0]}<br />{t.hero.h1[1]}
             </h1>
-            <p className="text-base md:text-lg font-medium mb-10 max-w-sm" style={{ color: DARK, opacity: 0.72, lineHeight: 1.6 }}>
-              {t.hero.sub}
+            <p className="text-base md:text-lg font-medium mb-10 max-w-sm" style={{ color: DARK, lineHeight: 1.6 }}>
+              {t.hero.sub.split(/\{([^}]+)\}/).map((part, i) =>
+                i % 2 === 1
+                  ? <mark key={i} style={{ backgroundColor: ORANGE, color: DARK, borderRadius: "0.2em", padding: "0 0.15em" }}>{part}</mark>
+                  : part
+              )}
             </p>
             <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3.5 rounded-full transition-all hover:opacity-80 hover:-translate-y-0.5" style={{ backgroundColor: DARK, color: "white" }}>
               {t.hero.cta}
