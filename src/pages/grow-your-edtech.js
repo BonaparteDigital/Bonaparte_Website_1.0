@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/edtech-landing.css";
 import Logo from "../assets/logo_bonaparte_black.svg";
 
-const OLIVE = "#C0D22D";
+const OLIVE = "oklch(0.89 0.17 122)";
 const DARK = "#14271D";
 const ORANGE = "#EC8602";
 const CREAM = "#f5f0e8";
@@ -53,7 +53,7 @@ const T = {
       tagline: "EdTech-native growth, production and localization.",
       servicesLabel: "SERVICES",
       contactLabel: "CONTACT",
-      bookCall: "Book a call ↗",
+      bookCall: "Book a call",
       copy: "© 2026 Bonaparte Digital. All rights reserved.",
       division: "EdTech Division",
     },
@@ -66,12 +66,12 @@ const T = {
       { title: "Content Production", desc: "Digital lessons, gamified activities and curriculum-aligned assets, produced and curated by real educators." },
     ],
     caseItems: [
-      { tag: "K-12 · ENGAGEMENT", title: "Nearpod (Renaissance)", desc: "Built the full growth engine for one of K-12's most-used engagement platforms — from performance campaigns to content strategy across teachers and district buyers.", chips: ["84% YoY downloads", "47% YoY new users", "1k+ lessons"] },
-      { tag: "MEDIA · TRUST", title: "Common Sense Media", desc: "Developed content and paid strategies positioning Common Sense as the go-to resource for parents and educators navigating digital life.", chips: ["Parent acquisition", "SEO authority", "B2B partnerships"] },
-      { tag: "K-12 · TUTORING", title: "BookNook", desc: "Built the algorithm and engineering muscle behind a tutoring platform focused on equitable access, matching students to sessions based on reading level and learning data.", chips: ["Tutoring algorithm", "Dedicated eng pod", "UI / QA / automation"] },
-      { tag: "HIGHER ED · LATAM", title: "Digital House", desc: "Personalized video campaign celebrating each graduate and recommending their next program, fully integrated with their CRM and brand system.", chips: ["1:1 personalized video", "Email + CRM activation", "Brand-led growth"] },
-      { tag: "KIDS · PRODUCT", title: "LeapFrog", desc: "Multi-language QA, content production and code assembly for a global kids learning brand, pioneering distributed EdTech production at scale.", chips: ["Multilingual QA", "Cost-optimized output", "15+ years of EdTech ops"] },
-      { tag: "GAMIFICATION", title: "Time To Climb (Nearpod)", desc: "Co-created Nearpod's flagship gamified quiz: a competitive learning race that became one of the platform's most-used activities.", chips: ["Flagship game activity", "SVG-animated UX", "Classroom engagement lift"] },
+      { tag: "K-12 · Engagement", title: "Nearpod (Renaissance)", desc: "Scaled a digital lesson engine from startup to category leader. 1,000+ produced lessons, 30 weekly contents curated by educators, and 84% YoY growth in lesson downloads.", chips: ["84% YoY downloads", "47% YoY new users", "1k+ lessons"] },
+      { tag: "Media Literacy · Curriculum", title: "Common Sense Media", desc: "Digitized the gold-standard intro curriculum of the most trusted name in kids' media: around 300 lessons turned from physical material into a modern digital program.", chips: ["~300 lessons", "Full digital transformation", "Gold standard partner"] },
+      { tag: "K-12 · Tutoring", title: "BookNook", desc: "Built the algorithm and engineering muscle behind a tutoring platform focused on equitable access, matching students to sessions based on reading level and learning data.", chips: ["Tutoring algorithm", "Dedicated eng pod", "UI / QA / automation"] },
+      { tag: "Higher Ed · LATAM", title: "Digital House", desc: "Personalized video campaign celebrating each graduate and recommending their next program, fully integrated with their CRM and brand system.", chips: ["1:1 personalized video", "Email + CRM activation", "Brand-led growth"] },
+      { tag: "Kids · Product", title: "LeapFrog", desc: "Multi-language QA, content production and code assembly for a global kids learning brand, pioneering distributed EdTech production at scale.", chips: ["Multilingual QA", "Cost-optimized output", "15+ years of EdTech ops"] },
+      { tag: "Gamification", title: "Time To Climb (Nearpod)", desc: "Co-created Nearpod's flagship gamified quiz: a competitive learning race that became one of the platform's most-used activities.", chips: ["Flagship game activity", "SVG-animated UX", "Classroom engagement lift"] },
     ],
     whyItems: [
       { title: "Educator-led production", desc: "Real teachers curate and quality-check the content we ship, not just designers." },
@@ -128,7 +128,7 @@ const T = {
       tagline: "Crescimento, produção e localização nativos em EdTech.",
       servicesLabel: "SERVIÇOS",
       contactLabel: "CONTATO",
-      bookCall: "Agendar call ↗",
+      bookCall: "Agendar call",
       copy: "© 2026 Bonaparte Digital. Todos os direitos reservados.",
       division: "Divisão EdTech",
     },
@@ -141,12 +141,12 @@ const T = {
       { title: "Produção de Conteúdo", desc: "Aulas digitais, atividades gamificadas e ativos alinhados ao currículo, produzidos e curados por educadores reais." },
     ],
     caseItems: [
-      { tag: "K-12 · ENGAJAMENTO", title: "Nearpod (Renaissance)", desc: "Construímos o motor de crescimento completo de uma das plataformas K-12 mais usadas — de campanhas de performance à estratégia de conteúdo para professores e distritos.", chips: ["84% crescimento YoY em downloads", "47% novos usuários YoY", "1k+ lições"] },
-      { tag: "MÍDIA · CONFIANÇA", title: "Common Sense Media", desc: "Desenvolvemos conteúdo e estratégias de mídia paga posicionando a Common Sense como o recurso essencial para pais e educadores no ambiente digital.", chips: ["Aquisição de pais", "Autoridade SEO", "Parcerias B2B"] },
-      { tag: "K-12 · TUTORIA", title: "BookNook", desc: "Construímos o algoritmo e a musculatura de engenharia por trás de uma plataforma de tutoria focada em acesso equitativo, conectando alunos a sessões com base no nível de leitura e dados de aprendizado.", chips: ["Algoritmo de tutoria", "Pod dedicado de eng", "UI / QA / automação"] },
-      { tag: "ENSINO SUPERIOR · LATAM", title: "Digital House", desc: "Campanha de vídeo personalizado celebrando cada formando e recomendando o próximo programa, totalmente integrada ao CRM e sistema de marca da empresa.", chips: ["Vídeo 1:1 personalizado", "Ativação Email + CRM", "Crescimento orientado a marca"] },
-      { tag: "INFANTIL · PRODUTO", title: "LeapFrog", desc: "QA multilíngue, produção de conteúdo e montagem de código para uma marca global de aprendizado infantil, pioneira na produção EdTech distribuída em escala.", chips: ["QA multilíngue", "Output custo-otimizado", "15+ anos de ops EdTech"] },
-      { tag: "GAMIFICAÇÃO", title: "Time To Climb (Nearpod)", desc: "Cocriamos o quiz gamificado carro-chefe do Nearpod: uma corrida de aprendizado competitiva que se tornou uma das atividades mais usadas da plataforma.", chips: ["Atividade carro-chefe", "UX animado em SVG", "Aumento de engajamento em sala"] },
+      { tag: "K-12 · Engajamento", title: "Nearpod (Renaissance)", desc: "Escalamos um motor de aulas digitais de startup a líder de categoria. 1.000+ aulas produzidas, 30 conteúdos semanais curados por educadores e 84% de crescimento YoY em downloads.", chips: ["84% YoY downloads", "47% YoY novos usuários", "1k+ aulas"] },
+      { tag: "Media Literacy · Currículo", title: "Common Sense Media", desc: "Digitalizamos o currículo introdutório gold-standard da maior referência em mídia para crianças: cerca de 300 aulas transformadas de material físico em programa digital moderno.", chips: ["~300 aulas", "Transformação digital completa", "Parceiro gold standard"] },
+      { tag: "K-12 · Tutoria", title: "BookNook", desc: "Construímos o algoritmo e o time de engenharia por trás de uma plataforma de tutoria focada em acesso equitativo, conectando alunos a sessões pelo nível de leitura e dados de aprendizagem.", chips: ["Algoritmo de tutoria", "Squad de eng dedicado", "UI / QA / automação"] },
+      { tag: "Ensino Superior · LATAM", title: "Digital House", desc: "Campanha de vídeo personalizado celebrando cada graduado e recomendando o próximo programa, integrada ao CRM e ao sistema de marca.", chips: ["Vídeo 1:1 personalizado", "Ativação Email + CRM", "Crescimento orientado a marca"] },
+      { tag: "Kids · Produto", title: "LeapFrog", desc: "QA multilíngue, produção de conteúdo e montagem de código para uma marca global de aprendizado infantil, pioneiros em produção EdTech distribuída em escala.", chips: ["QA multilíngue", "Output otimizado em custo", "15+ anos de operação EdTech"] },
+      { tag: "Gamificação", title: "Time To Climb (Nearpod)", desc: "Co-criamos o quiz gamificado mais icônico da Nearpod: uma corrida de aprendizado competitivo que virou uma das atividades mais usadas da plataforma.", chips: ["Atividade flagship", "UX com SVG animado", "Mais engajamento em sala"] },
     ],
     whyItems: [
       { title: "Produção liderada por educadores", desc: "Professores reais curamos e revisam o conteúdo que entregamos — não apenas designers." },
@@ -182,7 +182,7 @@ export const Head = () => (
   <>
     <title>Grow Your EdTech — Bonaparte Digital</title>
     <meta name="description" content="Bonaparte Digital is the full-stack growth unit for education brands. Paid media, content production, SEO & localization — built by people who've lived inside EdTech." />
-    <meta property="og:title" content="Grow Your EdTech — Bonaparte Digital" />
+    <meta property="og:title" content="Grow Your EdTech | BONAPARTE" />
     <meta property="og:description" content="15+ years inside EdTech. We grow education brands through paid media, content production, and program localization." />
     <meta property="og:url" content="https://bonapartedigital.com/grow-your-edtech" />
     <link rel="canonical" href="https://bonapartedigital.com/grow-your-edtech" />
@@ -215,21 +215,28 @@ export default function GrowYourEdTech() {
           <a href="/"><Logo className="w-[140px]" /></a>
 
           <div className="hidden md:flex items-center gap-8">
-            <a href="#services" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{t.nav.services}</a>
-            <a href="#cases" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{t.nav.cases}</a>
-            <a href="#why" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">{t.nav.why}</a>
+            <a href="#services" className="nav-link font-medium" style={{ fontSize: "1.125rem", fontFamily: "'Raleway', sans-serif" }}>{t.nav.services}</a>
+            <a href="#cases" className="nav-link font-medium" style={{ fontSize: "1.125rem", fontFamily: "'Raleway', sans-serif" }}>{t.nav.cases}</a>
+            <a href="#why" className="nav-link font-medium" style={{ fontSize: "1.125rem", fontFamily: "'Raleway', sans-serif" }}>{t.nav.why}</a>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggleLang}
-              className="text-xs font-bold px-4 py-2 rounded-full border-2 transition-all hover:opacity-80"
-              style={{ borderColor: DARK, color: DARK, minWidth: 80 }}
+              className="text-xs font-bold px-4 py-2 rounded-full border-2"
+              style={{ borderColor: DARK, color: DARK, minWidth: 80, transition: "background-color 0.2s ease, color 0.2s ease" }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = DARK; e.currentTarget.style.color = OLIVE; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.color = DARK; }}
             >
               {lang === "en" ? "EN · PT" : "PT · EN"}
             </button>
-            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold px-5 py-2.5 rounded-full transition-all hover:opacity-80" style={{ backgroundColor: DARK, color: "white" }}>
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full"
+              style={{ backgroundColor: DARK, color: "white", transition: "background-color 0.2s ease, color 0.2s ease" }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = ORANGE; e.currentTarget.style.color = DARK; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = DARK; e.currentTarget.style.color = "white"; }}
+            >
               {t.nav.book}
+              <svg className="w-3 h-3" style={{ transform: "rotate(-45deg)" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
 
@@ -256,10 +263,10 @@ export default function GrowYourEdTech() {
       </nav>
 
       {/* HERO */}
-      <section style={{ backgroundColor: OLIVE }} className="pt-16">
+      <section style={{ backgroundColor: OLIVE, minHeight: "100svh" }}>
         <div className="max-w-7xl mx-auto px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <div className="max-w-3xl">
-            <h1 className="font-black leading-none tracking-tight mb-8" style={{ fontSize: "clamp(60px, 10vw, 128px)", color: DARK, lineHeight: 0.88, letterSpacing: "-0.03em" }}>
+            <h1 className="leading-none tracking-tight mb-8" style={{ fontSize: "10rem", fontWeight: 800, color: DARK, lineHeight: 0.88, letterSpacing: "-0.03em" }}>
               {t.hero.h1[0]}<br />{t.hero.h1[1]}
             </h1>
             <p className="text-base md:text-lg font-medium mb-10 max-w-sm" style={{ color: DARK, lineHeight: 1.6 }}>
@@ -269,7 +276,11 @@ export default function GrowYourEdTech() {
                   : part
               )}
             </p>
-            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3.5 rounded-full transition-all hover:opacity-80 hover:-translate-y-0.5" style={{ backgroundColor: DARK, color: "white" }}>
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3.5 rounded-full"
+              style={{ backgroundColor: DARK, color: "white", transition: "background-color 0.2s ease, color 0.2s ease" }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = ORANGE; e.currentTarget.style.color = DARK; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = DARK; e.currentTarget.style.color = "white"; }}
+            >
               {t.hero.cta}
               <svg className="w-3.5 h-3.5 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -284,7 +295,7 @@ export default function GrowYourEdTech() {
             {t.stats.map((s, i) => (
               <div key={i} className="px-8 py-4 first:pl-0 last:pr-0">
                 <div className="font-black mb-1 tracking-tight" style={{ color: OLIVE, fontSize: "3.75rem", lineHeight: 1 }}>{s.num}</div>
-                <div className="text-xs font-medium uppercase tracking-wide" style={{ color: "rgba(255,255,255,0.55)" }}>{s.label}</div>
+                <div className="text-s font-medium tracking-wide" style={{ color: OLIVE }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -292,36 +303,46 @@ export default function GrowYourEdTech() {
       </section>
 
       {/* MARQUEE */}
-      <div style={{ backgroundColor: ORANGE }} className="overflow-hidden py-4">
-        <div className="edtech-marquee-track">
-          {[...MARQUEE_CLIENTS, ...MARQUEE_CLIENTS, ...MARQUEE_CLIENTS, ...MARQUEE_CLIENTS].map((name, i) => (
-            <span key={i} className="text-xs font-black uppercase tracking-widest whitespace-nowrap px-6" style={{ color: DARK }}>
-              {name} <span style={{ opacity: 0.4 }}>·</span>
+      <div style={{ backgroundColor: ORANGE, borderTop: `2px solid ${DARK}`, borderBottom: `2px solid ${DARK}` }} className="overflow-hidden py-5">
+        <div className="edtech-marquee-track" aria-hidden="true">
+          {[0, 1].map(copy => (
+            <span key={copy} className="flex items-center whitespace-nowrap">
+              {MARQUEE_CLIENTS.map((name, i) => (
+                <React.Fragment key={i}>
+                  <span className="font-black uppercase tracking-wider whitespace-nowrap" style={{ color: DARK, fontSize: "1.875rem", padding: "0 2rem" }}>
+                    {name}
+                  </span>
+                  <span style={{ color: DARK, fontSize: "1.875rem", opacity: 0.5 }}>·</span>
+                </React.Fragment>
+              ))}
             </span>
           ))}
         </div>
       </div>
 
       {/* SERVICES */}
-      <section id="services" className="py-24 md:py-32" style={{ backgroundColor: "white" }}>
+      <section id="services" className="py-24 md:py-32" style={{ backgroundColor: OLIVE }}>
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-[1fr,1.4fr] gap-10 md:gap-20 mb-16 items-end">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: DARK, opacity: 0.45 }}>{t.services.label}</p>
-              <h2 className="font-black leading-[0.95] tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", color: DARK }}>{t.services.h2}</h2>
-            </div>
-            <p className="text-lg leading-snug md:pb-2" style={{ color: DARK, opacity: 0.75 }}>{t.services.sub}</p>
+          <div className="mb-16">
+            <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: DARK, opacity: 0.80 }}>{t.services.label}</p>
+            <h2 className="font-black leading-[0.95] tracking-tight mb-8" style={{ fontSize: "clamp(40px, 6vw, 80px)", color: DARK }}>{t.services.h2}</h2>
+            <p className="text-lg leading-snug max-w-lg" style={{ color: DARK, opacity: 0.80 }}>{t.services.sub}</p>
           </div>
 
           <div
             className="grid sm:grid-cols-2 md:grid-cols-3 rounded-3xl overflow-hidden border"
-            style={{ gap: "1px", backgroundColor: "rgba(20,39,29,0.12)", borderColor: "rgba(20,39,29,0.12)" }}
+            style={{ borderColor: "rgba(20,39,29,0.18)" }}
           >
             {t.serviceItems.map((s, i) => (
               <div
                 key={i}
-                className="group p-8 md:p-10 flex flex-col gap-6 transition-colors duration-200"
-                style={{ backgroundColor: OLIVE }}
+                className="p-8 md:p-10 flex flex-col gap-6"
+                style={{
+                  backgroundColor: OLIVE,
+                  borderRight: (i % 3 !== 2) ? `1px solid rgba(20,39,29,0.18)` : "none",
+                  borderBottom: (i < 3) ? `1px solid rgba(20,39,29,0.18)` : "none",
+                  transition: "background-color 0.2s ease",
+                }}
                 onMouseEnter={e => e.currentTarget.style.backgroundColor = ORANGE}
                 onMouseLeave={e => e.currentTarget.style.backgroundColor = OLIVE}
               >
@@ -341,20 +362,28 @@ export default function GrowYourEdTech() {
       {/* SELECTED WORK */}
       <section id="cases" style={{ backgroundColor: CREAM }} className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.45 }}>{t.cases.label}</p>
+          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.80 }}>{t.cases.label}</p>
           <div className="mb-16">
             <h2 className="text-3xl md:text-5xl font-black max-w-2xl leading-tight tracking-tight mb-4" style={{ color: DARK }}>{t.cases.h2}</h2>
-            <p className="text-sm md:text-base font-medium max-w-lg" style={{ color: DARK, opacity: 0.65 }}>{t.cases.sub}</p>
+            <p className="text-sm md:text-base font-medium max-w-lg" style={{ color: DARK, opacity: 0.80 }}>{t.cases.sub}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {t.caseItems.map((c, i) => (
-              <div key={i} className="rounded-2xl p-8 border transition-all duration-200 hover:shadow-md" style={{ backgroundColor: CREAM, borderColor: "rgba(20,39,29,0.12)" }}>
-                <span className="inline-block text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-full mb-6" style={{ backgroundColor: DARK, color: OLIVE }}>{c.tag}</span>
-                <h3 className="text-2xl md:text-3xl font-black mb-4 leading-tight tracking-tight" style={{ color: DARK }}>{c.title}</h3>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: DARK, opacity: 0.65 }}>{c.desc}</p>
-                <div className="flex flex-wrap gap-2">
+              <div key={i} className="group rounded-3xl p-8 md:p-10 border flex flex-col gap-6 transition-colors duration-200" style={{ backgroundColor: CREAM, borderColor: "rgba(20,39,29,0.35)" }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = OLIVE}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = CREAM}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <span className="text-xs font-black tracking-widest uppercase px-3 py-1.5 rounded-full" style={{ backgroundColor: DARK, color: OLIVE }}>{c.tag}</span>
+                  <svg className="w-5 h-5 flex-shrink-0 opacity-30 group-hover:opacity-70 transition-opacity" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: DARK }}>
+                    <path d="M7 17L17 7M17 7H7M17 7v10"/>
+                  </svg>
+                </div>
+                <h3 className="font-black leading-tight tracking-tight" style={{ fontSize: "clamp(24px, 3vw, 36px)", color: DARK }}>{c.title}</h3>
+                <p className="text-sm leading-relaxed flex-1" style={{ color: DARK, opacity: 0.88 }}>{c.desc}</p>
+                <div className="flex flex-wrap gap-2 pt-2">
                   {c.chips.map((chip, j) => (
-                    <span key={j} className="text-xs font-semibold px-3 py-1.5 rounded-full border" style={{ borderColor: "rgba(20,39,29,0.25)", color: DARK }}>{chip}</span>
+                    <span key={j} className="text-xs font-semibold px-3 py-1.5 rounded-full border" style={{ borderColor: "rgba(20,39,29,0.22)", color: DARK }}>{chip}</span>
                   ))}
                 </div>
               </div>
@@ -366,14 +395,14 @@ export default function GrowYourEdTech() {
       {/* WHY */}
       <section id="why" style={{ backgroundColor: OLIVE }} className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.45 }}>{t.why.label}</p>
+          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.80 }}>{t.why.label}</p>
           <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight" style={{ color: DARK }}>{t.why.h2}</h2>
-          <p className="text-base md:text-lg font-medium max-w-xl mb-20" style={{ color: DARK, opacity: 0.72, lineHeight: 1.65 }}>{t.why.sub}</p>
+          <p className="text-base md:text-lg font-medium max-w-xl mb-20" style={{ color: DARK, opacity: 0.80, lineHeight: 1.65 }}>{t.why.sub}</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8">
             {t.whyItems.map((item, i) => (
-              <div key={i} className="py-8 border-t" style={{ borderColor: "rgba(20,39,29,0.2)" }}>
+              <div key={i} className="py-8 border-t-2" style={{ borderColor: DARK }}>
                 <div className="mb-4" style={{ color: DARK }}>{WHY_ICONS[i]}</div>
-                <h4 className="text-sm font-bold mb-2" style={{ color: DARK }}>{item.title}</h4>
+                <h4 className="text-lg font-bold mb-2" style={{ color: DARK }}>{item.title}</h4>
                 <p className="text-sm leading-relaxed" style={{ color: DARK, opacity: 0.65 }}>{item.desc}</p>
               </div>
             ))}
@@ -383,18 +412,19 @@ export default function GrowYourEdTech() {
 
       {/* CTA */}
       <section id="contact" style={{ backgroundColor: OLIVE }} className="pb-24 md:pb-32 px-6">
-        <div className="max-w-7xl mx-auto rounded-3xl p-12 md:p-20" style={{ backgroundColor: DARK, backgroundImage: `radial-gradient(ellipse at 75% 50%, rgba(236,134,2,0.18) 0%, transparent 60%)` }}>
+        <div className="max-w-7xl mx-auto rounded-3xl p-12 md:p-20" style={{ backgroundColor: DARK, backgroundImage: `radial-gradient(ellipse at 90% 30%, rgba(236,134,2,0.18) 0%, transparent 60%)` }}>
           <h2 className="font-black leading-none tracking-tight mb-4" style={{ fontSize: "clamp(40px, 7vw, 88px)", color: OLIVE, lineHeight: 0.92, letterSpacing: "-0.03em" }}>
             {t.cta.h2[0]}<br />{t.cta.h2[1]}
           </h2>
           <p className="text-sm md:text-base mb-10 mt-6 max-w-lg" style={{ color: OLIVE, opacity: 0.72 }}>{t.cta.sub}</p>
           <div className="flex flex-wrap items-center gap-4">
-            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3.5 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5" style={{ backgroundColor: ORANGE, color: DARK }}>
+            <a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 text-sm font-semibold px-6 py-3.5 rounded-full"
+              style={{ backgroundColor: ORANGE, color: DARK, transition: "background-color 0.2s ease, color 0.2s ease" }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = OLIVE; e.currentTarget.style.color = DARK; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = ORANGE; e.currentTarget.style.color = DARK; }}
+            >
               {t.cta.primary}
               <svg className="w-3.5 h-3.5 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="mailto:hello@bonapartedigital.com" className="inline-flex items-center text-sm font-semibold px-7 py-4 rounded-full border transition-all hover:bg-white/10" style={{ borderColor: "rgba(192,210,45,0.35)", color: OLIVE }}>
-              {t.cta.email}
             </a>
           </div>
         </div>
@@ -406,10 +436,10 @@ export default function GrowYourEdTech() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             <div>
               <Logo className="w-[130px] mb-3" />
-              <p className="text-sm" style={{ color: DARK, opacity: 0.65 }}>{t.footer.tagline}</p>
+              <p className="text-sm" style={{ color: DARK, opacity: 0.80 }}>{t.footer.tagline}</p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.45 }}>{t.footer.servicesLabel}</p>
+              <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.80 }}>{t.footer.servicesLabel}</p>
               <ul className="space-y-3">
                 {t.footerServices.map((s) => (
                   <li key={s}><a href="#services" className="text-sm font-medium transition-opacity hover:opacity-100" style={{ color: DARK, opacity: 0.72 }}>{s}</a></li>
@@ -420,7 +450,7 @@ export default function GrowYourEdTech() {
               <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.45 }}>{t.footer.contactLabel}</p>
               <ul className="space-y-3">
                 <li><a href="mailto:hello@bonapartedigital.com" className="text-sm font-medium transition-opacity hover:opacity-100" style={{ color: DARK, opacity: 0.72 }}>hello@bonapartedigital.com</a></li>
-                <li><a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-medium transition-opacity hover:opacity-100" style={{ color: DARK, opacity: 0.72 }}>{t.footer.bookCall}</a></li>
+                <li><a href={BOOK_CALL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium transition-opacity hover:opacity-100" style={{ color: DARK, opacity: 0.72 }}>{t.footer.bookCall}<svg className="w-3 h-3" style={{ transform: "rotate(-45deg)" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></li>
               </ul>
             </div>
           </div>

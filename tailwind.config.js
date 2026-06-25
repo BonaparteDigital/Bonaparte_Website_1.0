@@ -25,6 +25,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        'lime-new': 'oklch(0.89 0.17 122)',
         'olive': '#C0D22D',
         'olive-light': '#ECF2C0',
         'green': '#14271D',
