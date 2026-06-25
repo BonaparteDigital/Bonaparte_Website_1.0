@@ -207,7 +207,7 @@ export default function GrowYourEdTech() {
       {/* NAV */}
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-        style={{ backgroundColor: OLIVE, borderBottom: scrolled ? `1px solid rgba(20,39,29,0.15)` : "1px solid transparent" }}
+        style={{ backgroundColor: OLIVE, borderBottom: "1px solid rgba(20,39,29,0.15)" }}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
           <a href="/"><Logo className="w-[140px]" /></a>
@@ -277,7 +277,7 @@ export default function GrowYourEdTech() {
           <div className="grid grid-cols-2 md:grid-cols-4 divide-x" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
             {t.stats.map((s, i) => (
               <div key={i} className="px-8 py-4 first:pl-0 last:pr-0">
-                <div className="text-3xl md:text-4xl font-black mb-1 tracking-tight" style={{ color: OLIVE }}>{s.num}</div>
+                <div className="font-black mb-1 tracking-tight" style={{ color: OLIVE, fontSize: "3.75rem", lineHeight: 1 }}>{s.num}</div>
                 <div className="text-xs font-medium uppercase tracking-wide" style={{ color: "rgba(255,255,255,0.55)" }}>{s.label}</div>
               </div>
             ))}
@@ -297,21 +297,35 @@ export default function GrowYourEdTech() {
       </div>
 
       {/* SERVICES */}
-      <section id="services" style={{ backgroundColor: OLIVE }} className="py-24 md:py-32">
+      <section id="services" className="py-24 md:py-32" style={{ backgroundColor: "white" }}>
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: DARK, opacity: 0.45 }}>{t.services.label}</p>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
-            <h2 className="text-3xl md:text-5xl font-black max-w-xl leading-tight tracking-tight" style={{ color: DARK }}>{t.services.h2}</h2>
-            <p className="text-sm font-medium max-w-xs md:text-right" style={{ color: DARK, opacity: 0.65 }}>{t.services.sub}</p>
+          <div className="grid md:grid-cols-[1fr,1.4fr] gap-10 md:gap-20 mb-16 items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest mb-4" style={{ color: DARK, opacity: 0.45 }}>{t.services.label}</p>
+              <h2 className="font-black leading-[0.95] tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", color: DARK }}>{t.services.h2}</h2>
+            </div>
+            <p className="text-lg leading-snug md:pb-2" style={{ color: DARK, opacity: 0.75 }}>{t.services.sub}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+
+          <div
+            className="grid sm:grid-cols-2 md:grid-cols-3 rounded-3xl overflow-hidden border"
+            style={{ gap: "1px", backgroundColor: "rgba(20,39,29,0.12)", borderColor: "rgba(20,39,29,0.12)" }}
+          >
             {t.serviceItems.map((s, i) => (
-              <div key={i} className="rounded-2xl p-8 bg-white transition-all duration-200 hover:-translate-y-1 hover:shadow-sm">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: DARK, color: "white" }}>
+              <div
+                key={i}
+                className="group p-8 md:p-10 flex flex-col gap-6 transition-colors duration-200"
+                style={{ backgroundColor: OLIVE }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = ORANGE}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = OLIVE}
+              >
+                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: DARK, color: OLIVE }}>
                   {SERVICE_ICONS[i]}
                 </div>
-                <h3 className="text-base font-bold mb-3" style={{ color: DARK }}>{s.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: DARK, opacity: 0.62 }}>{s.desc}</p>
+                <div>
+                  <h3 className="text-xl font-black mb-3" style={{ color: DARK }}>{s.title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: DARK, opacity: 0.75 }}>{s.desc}</p>
+                </div>
               </div>
             ))}
           </div>
