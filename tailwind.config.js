@@ -25,12 +25,19 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        'lime-new': 'oklch(0.89 0.17 122)',
         'olive': '#C0D22D',
         'olive-light': '#ECF2C0',
         'green': '#14271D',
         'green-light': '#9ACBB1',
         'orange': '#EC8602',
         'orange-light': '#FED39A',
+        brand: {
+          dark: '#14271D',
+          orange: '#EC8602',
+          'orange-light': '#fef3e2',
+          'orange-mid': '#fde5b0',
+        },
       },
       fontFamily: {
         raleway: ["'Raleway', sans-serif"],
