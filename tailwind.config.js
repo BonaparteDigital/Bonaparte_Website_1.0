@@ -31,6 +31,12 @@ module.exports = {
         'green-light': '#9ACBB1',
         'orange': '#EC8602',
         'orange-light': '#FED39A',
+        brand: {
+          dark: '#14271D',
+          orange: '#EC8602',
+          'orange-light': '#fef3e2',
+          'orange-mid': '#fde5b0',
+        },
       },
       fontFamily: {
         raleway: ["'Raleway', sans-serif"],
