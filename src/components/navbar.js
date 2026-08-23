@@ -54,6 +54,7 @@ const Header = () => {
                   </div>
                 </div>
                 <Link className="nav-link decoration-orange mr-5" to="/work">Work</Link>
+                <a className="nav-link decoration-orange mr-5" href="/#testimonies">Testimonials</a>
                 <div className="relative group mr-5 inline-flex items-center gap-1 services-trigger">
                   <Link className="nav-link decoration-orange whitespace-nowrap" to="/resources/">Resources</Link>
                   <svg className="w-3 h-3 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
@@ -82,9 +83,10 @@ const Header = () => {
           <Link className="px-4 py-4 block decoration-primary decoration-2" to="/resources/" onClick={handleCloseModal}>resources</Link>
           <a className="px-4 py-4 block decoration-primary decoration-2" href="/#strategies" onClick={handleCloseModal}>strategies</a>
           <a className="px-4 py-4 block decoration-primary decoration-2" href="/#testimonies" onClick={handleCloseModal}>testimonials</a>
+
         </div>
         <div>
-           <Link to="https://calendly.com/hellobonaparte/meet-greet" className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book RDV</Link>
+           <a href="https://services.bonapartedigital.com/meetings/bonaparte" className="w-[200px] text-lg font-bold bg-olive text-green px-8 py-4 rounded-full">Book RDV</a>
         </div>
       </div>
     </header>
