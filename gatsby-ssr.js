@@ -19,7 +19,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
             ad_personalization: 'denied',
             functionality_storage: 'denied',
             personalization_storage: 'denied',
-            security_storage: 'denied'
+            security_storage: 'granted'
           });
         `
       }

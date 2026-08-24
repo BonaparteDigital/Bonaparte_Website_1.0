@@ -5,3 +5,5 @@ public/
 .env.production
 .claude/
 CLAUDE.md
+.vscode/
+CONVERSION-TRACKING.md

@@ -132,7 +132,18 @@ const BlogPostTemplate = ({ data }) => {
           })
         }
       )
-      setNewsletterStatus(response.ok ? 'success' : 'error')
+      if (response.ok) {
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({
+          event: 'newsletter_signup',
+          value: 25,
+          currency: 'EUR',
+          user_data: { email: newsletterEmail }
+        })
+        setNewsletterStatus('success')
+      } else {
+        setNewsletterStatus('error')
+      }
     } catch {
       setNewsletterStatus('error')
     }

@@ -71,7 +71,18 @@ const ChecklistForm = () => {
           }),
         }
       );
-      setStatus(response.ok ? "success" : "error");
+      if (response.ok) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "generate_lead",
+          value: 900,
+          currency: "EUR",
+          user_data: { email: email },
+        });
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     } finally {

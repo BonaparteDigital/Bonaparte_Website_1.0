@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { Link } from "gatsby";
+import MeetingEmbed from "../../components/meeting_embed";
 
-const BOOKING_URL = "https://services.bonapartedigital.com/meetings/bonaparte";
+// Scrolls to the on-page scheduler. Booking must complete on our own domain
+// or the Google Ads conversion cannot fire.
+const BOOKING_URL = "#book";
 
 const faqs = [
   {
@@ -326,15 +329,11 @@ const AdsPage = () => {
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-gradient-to-b from-white to-olive px-4 py-16 md:p-16">
+      <div id="book" className="bg-gradient-to-b from-white to-olive px-4 py-16 md:p-16 scroll-mt-24">
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-green mb-4">Ready to start?</h2>
           <p className="text-green/70 text-lg mb-8">Book a FREE Strategy Session today ($149 Value) and let's build your winning ad strategy together.</p>
-          <a href={BOOKING_URL} aria-label="Book a strategy session">
-            <button className="w-[240px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
-              Book Strategy Session
-            </button>
-          </a>
+          <MeetingEmbed />
         </div>
       </div>
     </Layout>
