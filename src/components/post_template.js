@@ -137,7 +137,7 @@ const BlogPostTemplate = ({ data }) => {
         window.dataLayer.push({
           event: 'newsletter_signup',
           value: 25,
-          currency: 'EUR',
+          currency: 'USD',
           user_data: { email: newsletterEmail }
         })
         setNewsletterStatus('success')

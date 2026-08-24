@@ -75,8 +75,8 @@ const ChecklistForm = () => {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: "generate_lead",
-          value: 900,
-          currency: "EUR",
+          value: 50,
+          currency: "USD",
           user_data: { email: email },
         });
         setStatus("success");

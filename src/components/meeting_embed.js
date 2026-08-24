@@ -37,7 +37,7 @@ const MeetingEmbed = () => {
             window.dataLayer.push({
                 event: "schedule_call",
                 value: 1800,
-                currency: "EUR",
+                currency: "USD",
             });
         };
 
