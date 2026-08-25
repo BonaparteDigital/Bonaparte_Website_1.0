@@ -27,15 +27,15 @@ const getCTAContent = (category) => {
     'Ads': {
       title: 'Need Help With Ads?',
       description: 'If you would like support setting up or managing your advertising, BONAPARTE offers performance-driven services tailored to small businesses.',
-      primaryLink: 'https://services.bonapartedigital.com/digital-advertising',
+      primaryLink: '/services/digital-advertising',
       primaryText: '📩 Book a FREE Strategy Session ($149 value)',
-      secondaryLink: 'https://services.bonapartedigital.com/ads-checklist',
+      secondaryLink: '/resources/ads-checklist',
       secondaryText: 'Download FREE Ads Checklist'
     },
     'SEO': {
       title: 'Need Help With SEO?',
       description: 'If you would like support optimizing your website and improving your search rankings, BONAPARTE offers proven SEO strategies that deliver results.',
-      primaryLink: 'https://services.bonapartedigital.com/seo-services',
+      primaryLink: '/services/seo',
       primaryText: '📩 Book a FREE SEO Audit ($199 value)',
       secondaryLink: 'https://services.bonapartedigital.com/seo-checklist',
       secondaryText: 'Download FREE SEO Checklist'
@@ -283,7 +283,7 @@ const BlogPostTemplate = ({ data }) => {
               <React.Fragment key={index}>
                 {part}
                 {index < arr.length - 1 && (
-                  <a href="https://bonapartedigital.com" className="text-[#EC8602] font-semibold underline hover:text-[#d47902]">
+                  <a href="/" className="text-[#EC8602] font-semibold underline hover:text-[#d47902]">
                     BONAPARTE
                   </a>
                 )}
