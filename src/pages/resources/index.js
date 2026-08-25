@@ -5,6 +5,13 @@ import { Seo } from "../../components/seo";
 
 const resources = [
   {
+    type: "Free Audit",
+    title: "Free SEO Audit",
+    description: "A real strategist reviews your site and sends you a prioritised action plan. Agencies charge $1,500+. We do it free.",
+    href: "/resources/seo-audit",
+    cta: "Claim it Free →",
+  },
+  {
     type: "Free Tool",
     title: "Digital Ads Checklist 2025",
     description: "The exact step-by-step checklist we use to plan, launch, and scale winning ad campaigns. 100% free.",

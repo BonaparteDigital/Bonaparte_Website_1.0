@@ -63,6 +63,7 @@ const Header = () => {
                   <div className="absolute top-full left-0 pt-2 hidden group-hover:block min-w-[190px] z-50">
                     <div className="bg-olive border border-green/10 shadow-[-4px_4px_0_#EC8602] rounded-xl py-2">
                       <Link to="/blog" className="block px-4 py-2 text-sm font-semibold hover:text-orange transition-colors">Blog</Link>
+                      <Link to="/resources/seo-audit" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Free SEO Audit</Link>
                       <Link to="/resources/ads-checklist" className="block px-4 py-2 text-sm hover:text-orange transition-colors">Ads Checklist</Link>
                     </div>
                   </div>

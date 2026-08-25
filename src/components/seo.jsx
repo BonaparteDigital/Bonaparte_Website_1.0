@@ -52,6 +52,7 @@ export const Seo = ({ title, description, pathname, meta = [], children }) => {
 }
   `}
     </script>
+    {children}
     </>
   )
 }
