@@ -70,7 +70,7 @@ const ChecklistForm = () => {
             ],
             context: {
               pageUri: "bonapartedigital.com/resources/ads-checklist",
-              pageName: "Digital Ads Checklist 2025",
+              pageName: "Digital Ads Checklist 2026",
             },
           }),
         }
@@ -106,7 +106,7 @@ const ChecklistForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-10 shadow-[-6px_6px_0_#EC8602]">
-      <h3 className="text-2xl font-bold text-green mb-2">Get your FREE Digital Ads 2025 Checklist</h3>
+      <h3 className="text-2xl font-bold text-green mb-2">Get your FREE Digital Ads 2026 Checklist</h3>
       <p className="text-green/70 mb-6">Complete the form below to get your Ads Checklist!</p>
 
       <div className="mb-4">
@@ -236,7 +236,7 @@ export default AdsChecklistPage;
 
 export const Head = () => (
   <Seo
-    title="Free Digital Ads Checklist 2025 | Bonaparte Digital"
+    title="Free Digital Ads Checklist 2026 | Bonaparte Digital"
     description="Download the exact step-by-step checklist BONAPARTE uses to plan, launch, and scale winning ad campaigns. 100% free."
     robots="index, follow"
   />

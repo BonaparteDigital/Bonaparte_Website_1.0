@@ -13,7 +13,7 @@ const resources = [
   },
   {
     type: "Free Tool",
-    title: "Digital Ads Checklist 2025",
+    title: "Digital Ads Checklist 2026",
     description: "The exact step-by-step checklist we use to plan, launch, and scale winning ad campaigns. 100% free.",
     href: "/resources/ads-checklist",
     cta: "Get it Free →",

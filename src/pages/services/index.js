@@ -112,16 +112,28 @@ const ServicesIndex = () => {
             </Link>
           </div>
 
-          {/* Lead magnet */}
-          <div className="mt-8 max-w-4xl mx-auto">
+          {/* Lead magnets */}
+          <div className="mt-8 max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <Link to="/resources/seo-audit" className="group">
+              <div className="border-2 border-green rounded-3xl p-8 h-full flex flex-col justify-between gap-6 bg-white/60 transition-transform duration-200 group-hover:-translate-y-1">
+                <div>
+                  <p className="text-sm font-semibold text-orange uppercase tracking-widest mb-1">Free Audit</p>
+                  <h3 className="text-2xl font-bold text-green">Free SEO Audit</h3>
+                  <p className="text-green mt-2">A real strategist reviews your site and sends you a prioritised action plan. Agencies charge $1,500+.</p>
+                </div>
+                <span className="shrink-0 inline-block bg-green text-olive px-8 py-3 rounded-full font-semibold whitespace-nowrap transition duration-300 group-hover:shadow-[-4px_4px_0_#EC8602] self-start">
+                  Claim it Free →
+                </span>
+              </div>
+            </Link>
             <Link to="/resources/ads-checklist" className="group">
-              <div className="border-2 border-green rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 bg-white/60 transition-transform duration-200 group-hover:-translate-y-1">
+              <div className="border-2 border-green rounded-3xl p-8 h-full flex flex-col justify-between gap-6 bg-white/60 transition-transform duration-200 group-hover:-translate-y-1">
                 <div>
                   <p className="text-sm font-semibold text-orange uppercase tracking-widest mb-1">Free Resource</p>
-                  <h3 className="text-2xl font-bold text-green">Digital Ads Checklist 2025</h3>
+                  <h3 className="text-2xl font-bold text-green">Digital Ads Checklist 2026</h3>
                   <p className="text-green mt-2">The exact step-by-step checklist we use to plan, launch, and scale winning ad campaigns.</p>
                 </div>
-                <span className="shrink-0 inline-block bg-green text-olive px-8 py-3 rounded-full font-semibold whitespace-nowrap transition duration-300 group-hover:shadow-[-4px_4px_0_#EC8602]">
+                <span className="shrink-0 inline-block bg-green text-olive px-8 py-3 rounded-full font-semibold whitespace-nowrap transition duration-300 group-hover:shadow-[-4px_4px_0_#EC8602] self-start">
                   Get it Free →
                 </span>
               </div>
