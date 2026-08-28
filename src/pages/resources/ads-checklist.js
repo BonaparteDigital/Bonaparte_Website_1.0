@@ -163,17 +163,6 @@ const ChecklistForm = () => {
 
 const AdsChecklistPage = () => (
   <Layout>
-    {/* Breadcrumb */}
-    <div className="bg-olive border-b border-green/10 px-4 py-3">
-      <div className="container mx-auto text-sm text-green/60">
-        <Link to="/" className="hover:text-orange transition-colors">Home</Link>
-        <span className="mx-2">›</span>
-        <Link to="/resources" className="hover:text-orange transition-colors">Resources</Link>
-        <span className="mx-2">›</span>
-        <span className="text-green font-medium">Ads Checklist</span>
-      </div>
-    </div>
-
     {/* Hero */}
     <div className="bg-green text-olive">
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">

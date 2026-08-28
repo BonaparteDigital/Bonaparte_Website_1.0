@@ -130,9 +130,9 @@ const AuditForm = ({ id }) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             fields: [
-              { name: "firstname", value: firstName.trim() },
-              { name: "email", value: email },
-              { name: "website", value: website.trim() },
+              { objectTypeId: "0-1", name: "firstname", value: firstName.trim() },
+              { objectTypeId: "0-1", name: "email", value: email },
+              { objectTypeId: "0-2", name: "domain", value: website.trim() },
             ],
             context: {
               pageUri: "bonapartedigital.com/resources/seo-audit",
@@ -282,21 +282,6 @@ const FaqItem = ({ q, a }) => {
 
 const SeoAuditPage = () => (
   <Layout>
-    {/* Breadcrumb */}
-    <div className="bg-olive border-b border-green/10 px-4 py-3">
-      <div className="container mx-auto text-sm text-green/60">
-        <Link to="/" className="hover:text-orange transition-colors">
-          Home
-        </Link>
-        <span className="mx-2">›</span>
-        <Link to="/resources" className="hover:text-orange transition-colors">
-          Resources
-        </Link>
-        <span className="mx-2">›</span>
-        <span className="text-green font-medium">Free SEO Audit</span>
-      </div>
-    </div>
-
     {/* Hero */}
     <div className="bg-green text-olive">
       <div className="container mx-auto px-4 py-24 md:py-32 flex flex-col md:flex-row items-center gap-12">
