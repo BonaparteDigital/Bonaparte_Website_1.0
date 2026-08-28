@@ -119,7 +119,7 @@ const BlogPostTemplate = ({ data }) => {
     setNewsletterStatus('loading')
     try {
       const response = await fetch(
-        'https://api.hsforms.com/submissions/v3/integration/submit/23706289/3968e95b-0467-46ab-a36f-882ef8f784ab',
+        'https://api.hsforms.com/submissions/v3/integration/submit/47027573/a75dc6b3-1b40-469c-a66d-590632d7d99a',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
