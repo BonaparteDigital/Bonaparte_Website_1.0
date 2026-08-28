@@ -3,13 +3,8 @@ import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { Link } from "gatsby";
 
-// ⚠️ BLOCKER BEFORE LAUNCH — create a dedicated HubSpot form for the SEO audit with
-// fields: firstname, email, website. The GUID below is the NEWSLETTER form (same
-// placeholder shortcut taken in ads-checklist.js) and it does NOT have a `website`
-// field. HubSpot's submissions API rejects unknown fields with a 400, so with this
-// placeholder every submission on this page fails. Swap the GUID before going live.
-const HS_PORTAL_ID = "23706289";
-const AUDIT_FORM_GUID = "3968e95b-0467-46ab-a36f-882ef8f784ab"; // TODO: replace with SEO audit form GUID
+const HS_PORTAL_ID = "47027573";
+const AUDIT_FORM_GUID = "f8770731-aa35-4749-88e9-7732a3b76695";
 
 // Anchor price shown on the page. Sourced from 2026 agency pricing surveys:
 // small-business audits run $500–$2,500, professional agency tier $1,500–$5,000.
@@ -109,11 +104,16 @@ const AuditForm = ({ id }) => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
-  const [status, setStatus] = useState(null); // null | "success" | "error" | "invalid"
+  const [status, setStatus] = useState(null); // null | "success" | "error" | "invalid" | "missing"
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!firstName.trim() || !website.trim()) {
+      setStatus("missing");
+      return;
+    }
 
     if (!EMAIL_RE.test(email)) {
       setStatus("invalid");
@@ -130,9 +130,9 @@ const AuditForm = ({ id }) => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             fields: [
-              { name: "firstname", value: firstName },
+              { name: "firstname", value: firstName.trim() },
               { name: "email", value: email },
-              { name: "website", value: website },
+              { name: "website", value: website.trim() },
             ],
             context: {
               pageUri: "bonapartedigital.com/resources/seo-audit",
@@ -228,6 +228,9 @@ const AuditForm = ({ id }) => {
         />
       </div>
 
+      {status === "missing" && (
+        <p className="text-red-500 text-sm mb-4">Please fill in all fields.</p>
+      )}
       {status === "invalid" && (
         <p className="text-red-500 text-sm mb-4">Please enter a valid email address.</p>
       )}

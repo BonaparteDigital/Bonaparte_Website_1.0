@@ -3,9 +3,8 @@ import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { Link } from "gatsby";
 
-// NOTE: Replace CHECKLIST_FORM_GUID with the actual HubSpot form GUID for the ads checklist
-const HS_PORTAL_ID = "23706289";
-const CHECKLIST_FORM_GUID = "3968e95b-0467-46ab-a36f-882ef8f784ab"; // TODO: replace with checklist form GUID
+const HS_PORTAL_ID = "47027573";
+const CHECKLIST_FORM_GUID = "47c691c3-bc32-418e-84ea-2681e3fa3310";
 
 const whatYouGet = [
   {
@@ -40,11 +39,16 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ChecklistForm = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState(null); // null | "success" | "error" | "invalid"
+  const [status, setStatus] = useState(null); // null | "success" | "error" | "invalid" | "missing"
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!firstName.trim()) {
+      setStatus("missing");
+      return;
+    }
 
     if (!EMAIL_RE.test(email)) {
       setStatus("invalid");
@@ -61,7 +65,7 @@ const ChecklistForm = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             fields: [
-              { name: "firstname", value: firstName },
+              { name: "firstname", value: firstName.trim() },
               { name: "email", value: email },
             ],
             context: {
@@ -131,6 +135,9 @@ const ChecklistForm = () => {
         />
       </div>
 
+      {status === "missing" && (
+        <p className="text-red-500 text-sm mb-4">Please fill in all fields.</p>
+      )}
       {status === "invalid" && (
         <p className="text-red-500 text-sm mb-4">Please enter a valid email address.</p>
       )}
