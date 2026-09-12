@@ -170,8 +170,8 @@ const AdsChecklistPage = () => (
           <span className="inline-block bg-orange text-white text-sm font-bold px-4 py-1 rounded-full mb-6 uppercase tracking-widest">Free Resource</span>
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
             Get your{" "}
-            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-              <span className="relative text-white">FREE</span>
+            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+              <span className="relative z-10 text-white">FREE</span>
             </span>{" "}
             Ads Checklist
           </h1>

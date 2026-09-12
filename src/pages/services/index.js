@@ -30,8 +30,8 @@ const ServicesIndex = () => {
           <div className="md:w-1/2">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
               We're not just another{" "}
-              <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-                <span className="relative text-white">digital marketing</span>
+              <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+                <span className="relative z-10 text-white">digital marketing</span>
               </span>{" "}
               agency
             </h1>
@@ -58,8 +58,8 @@ const ServicesIndex = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-green mb-4">
             The Integrated Marketing Agency{" "}
-            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-              <span className="relative text-white">Brands Trust</span>
+            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+              <span className="relative z-10 text-white">Brands Trust</span>
             </span>
           </h2>
           <p className="text-xl text-green mb-12">Strategy, Creative &amp; Media in One Place</p>
@@ -188,8 +188,8 @@ const ServicesIndex = () => {
         <div className="container flex flex-col md:flex-row justify-center items-center gap-8">
           <div className="md:w-1/2 text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold">Ready to{" "}
-              <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
-                <span className="relative text-white">Conquer?</span>
+              <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange before:-z-10 relative inline-block">
+                <span className="relative z-10 text-white">Conquer?</span>
               </span>
             </h2>
           </div>

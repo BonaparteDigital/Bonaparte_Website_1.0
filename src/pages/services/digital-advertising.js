@@ -3,6 +3,8 @@ import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
 import { Link } from "gatsby";
 import MeetingEmbed from "../../components/meeting_embed";
+import FaqItem from "../../components/faq_item";
+import AnimatedStat from "../../components/animated_stat";
 
 // Scrolls to the on-page scheduler. Booking must complete on our own domain
 // or the Google Ads conversion cannot fire.
@@ -89,25 +91,9 @@ const testimonials = [
 
 const platforms = ["Meta Ads", "Google Ads", "Amazon Ads", "LinkedIn Ads", "TikTok Ads", "Microsoft Bing"];
 
-const FaqItem = ({ q, a }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="border-b border-green/20">
-      <button
-        className="w-full text-left py-5 flex justify-between items-center gap-4 font-semibold text-lg text-green"
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-      >
-        <span>{q}</span>
-        <span className="shrink-0 text-orange text-2xl font-light">{open ? "−" : "+"}</span>
-      </button>
-      {open && <p className="pb-5 text-green/80 leading-relaxed">{a}</p>}
-    </div>
-  );
-};
-
 const AdsPage = () => {
   const [effectBtn, setEffectBtn] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   return (
     <Layout>
@@ -129,8 +115,8 @@ const AdsPage = () => {
             <p className="text-orange font-semibold uppercase tracking-widest text-sm mb-4">Digital Advertising</p>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
               We'll Grow Your Business with Ads that{" "}
-              <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-                <span className="relative text-white">Drive Revenue</span>
+              <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+                <span className="relative z-10 text-white">Drive Revenue</span>
               </span>
             </h1>
             <p className="text-xl text-olive-light leading-relaxed mb-8">
@@ -138,7 +124,7 @@ const AdsPage = () => {
             </p>
             <a href={BOOKING_URL} aria-label="Book your strategy session">
               <button
-                className={`${effectBtn && "animate-push"} w-[240px] text-lg bg-olive text-green px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5`}
+                className={`${effectBtn && "animate-push"} whitespace-nowrap text-lg bg-olive text-green px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5`}
                 onClick={() => setEffectBtn(true)}
                 onAnimationEnd={() => setEffectBtn(false)}
               >
@@ -190,7 +176,7 @@ const AdsPage = () => {
           </div>
           <div className="text-center mt-10">
             <a href={BOOKING_URL} aria-label="Get Started Now">
-              <button className="w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
+              <button className="whitespace-nowrap text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
                 Get Started Now
               </button>
             </a>
@@ -208,10 +194,7 @@ const AdsPage = () => {
               { stat: "$15M+", label: "In managed ad spend" },
               { stat: "400%", label: "Average ROAS" },
             ].map(({ stat, label }) => (
-              <div key={stat}>
-                <p className="text-4xl md:text-6xl font-black text-orange mb-2">{stat}</p>
-                <p className="text-olive-light text-lg">{label}</p>
-              </div>
+              <AnimatedStat key={stat} stat={stat} label={label} />
             ))}
           </div>
         </div>
@@ -222,14 +205,14 @@ const AdsPage = () => {
         <div className="container mx-auto max-w-3xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-green mb-4">
             Claim your{" "}
-            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-              <span className="relative text-white">FREE Strategy Session</span>
+            <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+              <span className="relative z-10 text-white">FREE Strategy Session</span>
             </span>
           </h2>
           <p className="text-green/70 text-lg mb-2">($149 Value)</p>
           <p className="text-green text-lg mb-8">Find the perfect time to meet with us and start your journey to better advertising results.</p>
           <a href={BOOKING_URL} aria-label="Book your FREE session">
-            <button className="w-[220px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
+            <button className="whitespace-nowrap text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
               Book Your FREE Session
             </button>
           </a>
@@ -256,7 +239,7 @@ const AdsPage = () => {
           </div>
           <div className="text-center mt-10">
             <a href={BOOKING_URL} aria-label="Get Started Now">
-              <button className="w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
+              <button className="whitespace-nowrap text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
                 Get Started Now
               </button>
             </a>
@@ -277,7 +260,7 @@ const AdsPage = () => {
             <p className="text-olive leading-relaxed">In your Strategy Session we'll help you decide what your ideal budget looks like.</p>
           </div>
           <a href={BOOKING_URL} aria-label="Get Started Now">
-            <button className="w-[200px] text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
+            <button className="whitespace-nowrap text-lg bg-green text-olive px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
               Get Started Now
             </button>
           </a>
@@ -311,7 +294,7 @@ const AdsPage = () => {
             Your ads running seamlessly, generating steady leads and sales while you focus on growing your business. If you want better results and more growth without the hassle, it's time to start with BONAPARTE.
           </p>
           <a href={BOOKING_URL} aria-label="Build my strategy">
-            <button className="w-[240px] text-lg bg-olive text-green px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
+            <button className="whitespace-nowrap text-lg bg-olive text-green px-8 py-4 rounded-full transition duration-300 hover:shadow-[-5px_5px_0px_0px_#EC8602] hover:translate-x-1.5 hover:-translate-y-1.5">
               Let's Build My Strategy
             </button>
           </a>
@@ -323,7 +306,14 @@ const AdsPage = () => {
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold text-green text-center mb-12">Got any questions?</h2>
           <div>
-            {faqs.map((faq, i) => <FaqItem key={i} {...faq} />)}
+            {faqs.map((faq, i) => (
+              <FaqItem
+                key={i}
+                {...faq}
+                isOpen={openFaqIndex === i}
+                onToggle={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+              />
+            ))}
           </div>
         </div>
       </div>

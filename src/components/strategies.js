@@ -11,8 +11,8 @@ const Strategies = () => {
     return (
         <div id="strategies" className="container text-green">
             <div className="text-center md:text-left md:w-[520px]">
-              <h2 className="text-4xl font-bold mb-10 md:text-5xl">Accelerate Your Business <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-            <span className="relative text-white">Growth</span>
+              <h2 className="text-4xl font-bold mb-10 md:text-5xl">Accelerate Your Business <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+            <span className="relative z-10 text-white">Growth</span>
             </span></h2>
               <p className="text-xl md:text-2xl">Unlock your business's full potential and command the battlefield with our comprehensive digital marketing services.</p>
             </div>

@@ -27,8 +27,8 @@ const ResourcesIndex = () => (
       <div className="container mx-auto px-4 py-24 md:py-36 text-center">
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
           Resources &{" "}
-          <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange relative inline-block">
-            <span className="relative text-white">Insights</span>
+          <span className="before:block before:absolute before:-inset-1 before:-skew-y-[1.5deg] before:bg-orange before:-z-10 relative inline-block">
+            <span className="relative z-10 text-white">Insights</span>
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-olive-light max-w-2xl mx-auto">
@@ -83,8 +83,8 @@ const ResourcesIndex = () => (
       <div className="container flex flex-col md:flex-row justify-center items-center gap-8">
         <div className="md:w-1/2 text-center">
           <h2 className="text-4xl md:text-5xl font-extrabold">Want us to do the{" "}
-            <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange relative inline-block">
-              <span className="relative text-white">heavy lifting?</span>
+            <span className="before:block before:absolute before:-inset-2 before:-skew-y-3 before:bg-orange before:-z-10 relative inline-block">
+              <span className="relative z-10 text-white">heavy lifting?</span>
             </span>
           </h2>
         </div>
