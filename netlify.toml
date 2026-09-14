@@ -1,0 +1,5 @@
+# Only declares the Functions directory. Build command/publish directory are
+# left exactly as configured in the Netlify dashboard -- not redeclared here,
+# so this can't silently override the live site's existing build settings.
+[functions]
+  directory = "netlify/functions"
